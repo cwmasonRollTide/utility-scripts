@@ -1,0 +1,121 @@
+# Excel Search Tool
+
+## Table of Contents
+1. [Introduction](#introduction)
+2. [Features](#features)
+3. [Installation](#installation)
+4. [Usage](#usage)
+   - [Using PowerShell Script](#using-powershell-script)
+   - [Using Executable](#using-executable)
+5. [Building Executable](#building-executable)
+5. [How It Works](#how-it-works)
+6. [Troubleshooting](#troubleshooting)
+7. [Contributing](#contributing)
+8. [License](#license)
+
+## Introduction
+
+The Excel Search Tool is a utility to search for similar strings/values within Excel files. It allows users to specify a search value, column name, and tolerance level to find matching or near-matching entries in Excel spreadsheets. This tool is particularly useful for data cleaning, duplicate detection, and fuzzy matching tasks.
+
+## Features
+
+- Search for exact or similar strings in Excel files
+- Adjustable tolerance level for fuzzy matching
+- Option to return entire rows or just matching values
+- User-friendly interface for input and file selection
+- Exportable results
+
+## Installation
+
+1. Ensure you have PowerShell 5.1 or later installed on your Windows machine.
+2. Download the project files or clone the repository to your local machine.
+3. If you plan to use the PowerShell script directly, make sure you have the required modules installed:
+
+```powershell
+Install-Module -Name ImportExcel -Scope CurrentUser -Force
+```
+
+## Usage
+
+### Using PowerShell Script
+
+1. Open PowerShell:
+   - Press `Win + X` and select "Windows PowerShell" or "PowerShell" from the menu.
+   - Alternatively, search for "PowerShell" in the Start menu and open it.
+
+2. Navigate to the project directory:
+   ```powershell
+   cd path\to\project\directory
+   ```
+   - example: if you downloaded to your desktop, 
+
+   ```powershell
+    cd C:\Users\Name\Desktop\utility-scripts\SearchExcelFileProject
+   ```
+
+3. Run the script:
+   ```powershell
+   .\Search\Search-ExcelFileWithUI.ps1
+   ```
+
+4. Follow the on-screen prompts to select your Excel file, enter search parameters, and view results.
+
+### Using Executable
+
+1. Locate the `Search-ExcelFile.exe` in the project directory.
+2. Double-click the executable to run it.
+3. Follow the on-screen prompts to select your Excel file, enter search parameters, and view results.
+
+## Building Executable
+
+1. Navigate to the project directory:
+```powershell
+cd ~\utility-scripts\SearchExcelFileProject
+```
+
+2. Install the necessary modules
+```powershell
+Install-Module -Name ps2exe -Scope CurrentUser -Force
+Install-Module -Name ImportExcel -Scope CurrentUser -Force
+```
+
+3. Define your variables and run the command to make your desired .exe file!
+
+```powershell
+    ps2exe `
+>>     -InputFile "~\utility-scripts\SearchExcelFileProject\ExeFiles\Search-ExcelFileWithUI.ps1" `
+>>     -OutputFile $outputPath `
+>>     -Verbose `
+>>     -Title $title `
+>>     -Version $version `
+>>     -Description $description `
+>>     -Company $company `
+>>     -Product $product `
+>>     -Copyright $copyright `
+>>     -RequireAdmin `
+>>     -NoConsole `
+>>     -ErrorAction Stop `
+>>     -IconFile $iconPath
+```
+
+## How It Works
+
+1. The tool prompts you to select an Excel file.
+2. You enter a search value, specify the column to search in, and set a tolerance level for fuzzy matching.
+3. The script searches the specified column for entries that match or are similar to your search value, within the given tolerance.
+4. Results are displayed in the console and can be optionally saved to a file.
+
+## Troubleshooting
+
+- If you encounter permission issues, try running PowerShell as an administrator.
+- Ensure that your Excel file is not open in another program when running the search.
+- Check if your data is "clean" or if it has a bunch of funny characters in there. 
+- If the executable doesn't run, make sure you have the latest .NET Framework installed.
+
+## Contributing
+
+I am not really interested in contributions to this repo at this time. I have another repo for unfinished scripts where I just mess around, I want this one to be for "complete" projects I can share
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
