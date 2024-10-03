@@ -45,7 +45,7 @@ function Compare-Strings {
          $differences++
       }
 
-      if ($differences > $tolerance) {
+      if ($differences -gt $tolerance) {
          return $false
       }
    }

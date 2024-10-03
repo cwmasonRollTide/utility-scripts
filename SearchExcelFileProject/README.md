@@ -28,7 +28,9 @@ The Excel Search Tool is a utility to search for similar strings/values within E
 ## Installation
 
 1. Ensure you have PowerShell 5.1 or later installed on your Windows machine.
+
 2. Download the project files or clone the repository to your local machine.
+
 3. If you plan to use the PowerShell script directly, make sure you have the required modules installed:
 
 ```powershell
@@ -39,11 +41,13 @@ Install-Module -Name ImportExcel -Scope CurrentUser -Force
 
 ### Using PowerShell Script
 
-1. Open PowerShell:
+1. Clone or download the project directory
+
+2. Open PowerShell:
    - Press `Win + X` and select "Windows PowerShell" or "PowerShell" from the menu.
    - Alternatively, search for "PowerShell" in the Start menu and open it.
 
-2. Navigate to the project directory:
+3. Navigate to the project directory:
    ```powershell
    cd path\to\project\directory
    ```
@@ -53,20 +57,27 @@ Install-Module -Name ImportExcel -Scope CurrentUser -Force
     cd C:\Users\Name\Desktop\utility-scripts\SearchExcelFileProject
    ```
 
-3. Run the script:
+4. Run the script:
    ```powershell
-   .\Search\Search-ExcelFileWithUI.ps1
+   .\Search-ExcelFileWithUI.ps1
    ```
 
-4. Follow the on-screen prompts to select your Excel file, enter search parameters, and view results.
+5. Follow the on-screen prompts to select your Excel file, enter search parameters, and view results.
 
 ### Using Executable
 
-1. Locate the `Search-ExcelFile.exe` in the project directory.
-2. Double-click the executable to run it.
-3. Follow the on-screen prompts to select your Excel file, enter search parameters, and view results.
+1. Locate the `Search-ExcelFile.exe` in the project directory. It is in ~\utility-scripts\SearchExcelFileProject\Search-ExcelFile.exe
+
+2. Download File
+
+3. Double-click the executable to run it.
+
+4. Follow the on-screen prompts to select your Excel file, enter search parameters, and view results.
 
 ## Building Executable
+
+Due to difficulties (*cough* *cough* skill issues) there is a different version of the script with all the functions in one file
+in the SearchExcelFileProject/ExeFiles directory. This makes it simpler to use the ps2exe utility to convert the powershell scripts into an .exe
 
 1. Navigate to the project directory:
 ```powershell
@@ -82,35 +93,41 @@ Install-Module -Name ImportExcel -Scope CurrentUser -Force
 3. Define your variables and run the command to make your desired .exe file!
 
 ```powershell
-    ps2exe `
->>     -InputFile "~\utility-scripts\SearchExcelFileProject\ExeFiles\Search-ExcelFileWithUI.ps1" `
->>     -OutputFile $outputPath `
->>     -Verbose `
->>     -Title $title `
->>     -Version $version `
->>     -Description $description `
->>     -Company $company `
->>     -Product $product `
->>     -Copyright $copyright `
->>     -RequireAdmin `
->>     -NoConsole `
->>     -ErrorAction Stop `
->>     -IconFile $iconPath
+      ps2exe `
+         -InputFile "~\utility-scripts\SearchExcelFileProject\ExeFiles\Search-ExcelFileWithUI.ps1" `
+         -OutputFile $outputPath `
+         -Verbose `
+         -Title $title `
+         -Version $version `
+         -Description $description `
+         -Company $company `
+         -Product $product `
+         -Copyright $copyright `
+         -RequireAdmin `
+         -NoConsole `
+         -ErrorAction Stop `
+         -IconFile $iconPath
 ```
 
 ## How It Works
 
 1. The tool prompts you to select an Excel file.
+
 2. You enter a search value, specify the column to search in, and set a tolerance level for fuzzy matching.
+
 3. The script searches the specified column for entries that match or are similar to your search value, within the given tolerance.
+
 4. Results are displayed in the console and can be optionally saved to a file.
 
 ## Troubleshooting
 
 - If you encounter permission issues, try running PowerShell as an administrator.
+
 - Ensure that your Excel file is not open in another program when running the search.
+
 - Check if your data is "clean" or if it has a bunch of funny characters in there. 
-- If the executable doesn't run, make sure you have the latest .NET Framework installed.
+
+- Have you tried unplugging it and plugging it back in
 
 ## Contributing
 
