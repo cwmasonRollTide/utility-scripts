@@ -57,7 +57,6 @@ function Search-ExcelFile {
 
     $tolerance = Get-ToleranceInput
     $returnWholeRow = Get-YesNoInput-Bool "Do you want to return the whole row when we find matches within the tolerance you set? (y/n)"
-    if (-not $returnWholeRow) { return }
 
     try {
         Write-Host "Searching file. This may take a while for large datasets..."
