@@ -36,10 +36,6 @@ function Find-ExcelContent {
         System.Object[] | string[] 
         An array of matching strings or rows from the excel file, depending on the returnWholeRow parameter.
 
-    .NOTES
-        Author: Connor Mason
-        Date:   10/2/2024
-
 #>
     [CmdletBinding()]
     param (

@@ -28,10 +28,6 @@ function Open-File {
         .OUTPUTS 
             String
             The full path of the selected file. If canceled, exits the script.
-        
-        .NOTES
-            Author: Connor Mason
-            Date: 10/2/2024
     #>
     [CmdletBinding()]
     Param(

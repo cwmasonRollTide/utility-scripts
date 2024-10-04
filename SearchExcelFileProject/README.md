@@ -129,6 +129,15 @@ Install-Module -Name ImportExcel -Scope CurrentUser -Force
 
 - Have you tried unplugging it and plugging it back in
 
+## Dependencies
+
+- [ImportExcel](https://www.powershellgallery.com/packages/ImportExcel/7.8.6)
+   * This tool makes it incredibly simple to import excel files and process them quickly 
+   and it wasn't built into powershell initially. 
+
+- [ps2exe](https://www.powershellgallery.com/packages/ps2exe/1.0.13)
+   * 
+
 ## Contributing
 
 I am not really interested in contributions to this repo at this time. I have another repo for unfinished scripts where I just mess around, I want this one to be for "complete" projects I can share

@@ -21,10 +21,6 @@ function Compare-Strings {
 
       .OUTPUTS
          Boolean. Returns True if the number of character differences between the two strings is less than or equal to the tolerance, otherwise False.
-
-      .NOTES
-         Author: Connor Mason
-         Date: 10/2/2024
    #>
    [CmdletBinding()]
    Param(
@@ -76,10 +72,6 @@ function Compare-StringsRegex {
 
       .OUTPUTS
          Boolean. True if differences <= tolerance, otherwise False.
-
-      .NOTES
-         Author: Connor Mason
-         Date: 10/2/2024
    #>
    [CmdletBinding()]
    Param(

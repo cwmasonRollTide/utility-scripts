@@ -29,10 +29,6 @@ function Get-LargeTextInput {
     .EXAMPLE
         Get-LargeTextInput -prompt "Please enter a description of the issue" -title "Issue Description"
         This will display a dialog box with a text box for the user to enter a description of the issue.
-
-    .NOTES
-        Author: Connor Mason
-        Date: 10/2/2024
 #>
     param (
         [string]$prompt,

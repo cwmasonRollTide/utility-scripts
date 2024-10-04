@@ -22,10 +22,6 @@ function Search-ExcelFile {
         .EXAMPLE
             Search-ExcelFile
             This will execute the function and prompt for necessary input.
-
-        .NOTES
-            Author: Connor Mason
-            Last Updated: 10/2/2024
     #>
     [CmdletBinding()]
     Param()
