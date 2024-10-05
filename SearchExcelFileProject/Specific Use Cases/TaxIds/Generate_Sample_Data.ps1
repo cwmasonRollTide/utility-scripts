@@ -1,7 +1,7 @@
 Import-Module ImportExcel
 
 # Define the number of employees
-$numberOfEmployees = 1000
+$numberOfEmployees = 10000
 
 # Create an array to hold our employee data
 $employees = @()
@@ -51,7 +51,7 @@ for ($i = 1; $i -le $numberOfEmployees; $i++) {
         EmployeeId = $i
         FirstName = $firstNames | Get-Random
         LastName = $lastNames | Get-Random
-        TaxId = Get-RandomTaxId -isTrust $isTrust
+        Tax_Id = Get-RandomTaxId -isTrust $isTrust
         Address = "$((Get-Random -Minimum 100 -Maximum 9999)) $($streetNames | Get-Random) St"
         City = $cities | Get-Random
         State = $states | Get-Random
@@ -75,15 +75,17 @@ for ($i = 0; $i -lt $errorGroups; $i++) {
     $isTrust = (Get-Random -Minimum 0 -Maximum 100) -lt 30  # 30% chance for the group to be a trust
     $trustId = if ($isTrust) { Get-RandomTrustId } else { $null }
 
+    $baseTaxId = Get-RandomTaxId -isTrust $isTrust
+
     for ($j = 0; $j -lt 3; $j++) {
         $index = $startIndex + $j
         if ($j -eq 0) {
-            $baseTaxId = Get-RandomTaxId -isTrust $isTrust
+            $currentTaxId = $baseTaxId
         } else {
-            $baseTaxId = Increment-TaxId -taxId $baseTaxId
+            $currentTaxId = Increment-TaxId -taxId $baseTaxId
         }
 
-        $employees[$index].TaxId = $baseTaxId
+        $employees[$index].Tax_Id = $currentTaxId
         $employees[$index].Company = $company
         $employees[$index].LastName = $lastName
         $employees[$index].IsTrust = $isTrust
@@ -92,7 +94,7 @@ for ($i = 0; $i -lt $errorGroups; $i++) {
 }
 
 # Export to Excel
-$filePath = "../data/GeneratedTestData.xlsx"
+$filePath = "../data/GeneratedTestData_10000.xlsx"
 $employees | Export-Excel -Path $filePath -AutoSize -AutoFilter -FreezeTopRow -BoldTopRow
 
 # Debug: Check if file was created
