@@ -1,7 +1,7 @@
 Import-Module ImportExcel
 
 # Define the number of employees
-$numberOfEmployees = 10000
+$numberOfEmployees = 100000
 
 # Create an array to hold our employee data
 $employees = @()
@@ -14,7 +14,7 @@ $cities = @("New York", "Los Angeles", "Chicago", "Houston", "Phoenix", "Philade
 $states = @("NY", "CA", "IL", "TX", "AZ", "PA", "FL", "OH", "MI", "GA")
 $companies = @("TechCorp", "GlobalFinance", "MegaRetail", "EcoSolutions", "HealthInnovations")
 
-# Function to generate a random SSN-like Tax ID with a trust indicator
+# Function to generate a random SSN-like Tax ID with a trust/business acct indicator
 function Get-RandomTaxId {
     param(
         [bool]$isTrust
@@ -93,8 +93,17 @@ for ($i = 0; $i -lt $errorGroups; $i++) {
     }
 }
 
+# Introduce same Tax ID for 10% of employees
+$similarTaxId = "S 123456789"
+$numberOfSimilarTaxIds = [math]::Floor($numberOfEmployees * 0.10)
+
+for ($i = 0; $i -lt $numberOfSimilarTaxIds; $i++) {
+    $index = Get-Random -Minimum 0 -Maximum ($numberOfEmployees - 1)
+    $employees[$index].Tax_Id = $similarTaxId
+}
+
 # Export to Excel
-$filePath = "../data/GeneratedTestData_10000.xlsx"
+$filePath = "../data/GeneratedTestData_100000.xlsx"
 $employees | Export-Excel -Path $filePath -AutoSize -AutoFilter -FreezeTopRow -BoldTopRow
 
 # Debug: Check if file was created

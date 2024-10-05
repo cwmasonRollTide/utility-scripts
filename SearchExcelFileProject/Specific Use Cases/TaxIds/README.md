@@ -19,6 +19,6 @@
     ```
 
 - Should prompt you for your file! This script currently assumes the Tax_Id column is spelled and cased that way. 
-- If that needs to change, change line 59 in the script. 
+- If that needs to change, change line 58 in the script. 
     * $columnName = "Tax_Id"
 - This is a result of me being lazy after ripping out the logic from the generalized tool to prompt for a column for fuzzy matching lol

@@ -48,7 +48,6 @@ function Search-For-Bad-Data {
 
     try {
         Log-Step "Starting Search for Bad Data in Excel File"
-
         $initialDirectory = Get-StartLocation
         $selectedFile = Open-File -Title "Select the Input Excel File" -InitialDirectory $initialDirectory -FileTypeFilter "Excel Files (*.xlsx)|*.xlsx" 
         Log-Step "File selected: $selectedFile"
@@ -64,37 +63,32 @@ function Search-For-Bad-Data {
             throw "The column '$columnName' does not exist in the Excel file."
         }
 
-        $taxIds = $excelData.$columnName
-        Log-Step "Extracted Tax IDs. Count: $($taxIds.Count)"
-
+        $taxIdDict = @{}
         $badTaxIds = [System.Collections.Generic.HashSet[string]]::new()
-        $seenSTaxIds = [System.Collections.Generic.HashSet[string]]::new()
-        $seenTTaxIds = [System.Collections.Generic.HashSet[string]]::new()
 
-        Log-Step "Starting processing of Tax IDs"
-        for ($i = 0; $i -lt $taxIds.Count; $i++) {
-            $currentTaxId = $taxIds[$i]
-            $prefix = $currentTaxId.Substring(0, 1)
+        Log-Step "Starting processing..."
+        for ($i = 0; $i -lt $excelData.Count; $i++) {
+            $currentRow = $excelData[$i]
+            $currentTaxId = $currentRow.$columnName
 
-            if ($prefix -eq 'S') {
-                if ($seenSTaxIds.Contains($currentTaxId)) {
-                    $badTaxIds.Add($currentTaxId) | Out-Null
-                } else {
-                    $seenSTaxIds.Add($currentTaxId) | Out-Null
-                }
-            } elseif ($prefix -eq 'T') {
-                $seenTTaxIds.Add($currentTaxId) | Out-Null
+            if ($taxIdDict.ContainsKey($currentTaxId)) {
+                $taxIdDict[$currentTaxId].Add($currentRow)
+            } else {
+                $taxIdDict[$currentTaxId] = [System.Collections.Generic.List[PSObject]]::new()
+                $taxIdDict[$currentTaxId].Add($currentRow)
             }
 
-            for ($j = $i + 1; $j -lt $taxIds.Count; $j++) {
-                $comparisonResult = Compare-Tax_Id_Values -Str1 $currentTaxId -Str2 $taxIds[$j] -Tolerance 1
-                if ($comparisonResult -eq 1) {  # One digit off
-                    $badTaxIds.Add($currentTaxId) | Out-Null
-                    $badTaxIds.Add($taxIds[$j]) | Out-Null
+            foreach ($key in $taxIdDict.Keys) {
+                if ($key -ne $currentTaxId) {
+                    $comparisonResult = Compare-Tax_Id_Values -Str1 $currentTaxId -Str2 $key -Tolerance 1
+                    if ($comparisonResult -eq 1) {
+                        $badTaxIds.Add($currentTaxId) | Out-Null
+                        $badTaxIds.Add($key) | Out-Null
+                    }
                 }
             }
 
-            Update-ProgressBar -completed ($i + 1) -total $taxIds.Count
+            Update-ProgressBar -completed ($i + 1) -total $excelData.Count
         }
 
         Write-Host "`nProcessing completed"
@@ -107,7 +101,7 @@ function Search-For-Bad-Data {
         } else {
             Write-Host "Found $($fullRowData.Count) rows with potentially bad Tax IDs."
             if (Get-YesNoInput-Bool "Would you like to save the results to a file?") {
-                Save-File -Content $fullRowData -Title "Save the Results File" -InitialDirectory $initialDirectory
+                Save-ExcelFile -Content $fullRowData -Title "Save the Results File" -InitialDirectory $initialDirectory
             }
         }
     }
@@ -143,7 +137,13 @@ function Compare-Tax_Id_Values {
             This example compares the strings "S12345" and "T12345" with a tolerance of 1.
             The function will return 0, indicating that the strings are not similar because they are trust/business vs ssn numbers.
 
+            Compare-Tax_Id_Values -Str1 "S12345" -Str2 "S12346" -Tolerance 0
+            This example compares the strings "S12345" and "S12346" with a tolerance of 0.
+            The function will return 0, indicating that the strings are not similar because they are more than one digit off.
 
+            Compare-Tax_Id_Values -Str1 "S12345" -Str2 "S12345" -Tolerance 0
+            This example compares the strings "S12345" and "S12345" with a tolerance of 0.
+            The function will return 2, indicating that the strings are an exact match.
     #>
     [CmdletBinding()]
     Param(
@@ -215,7 +215,7 @@ function Get-YesNoInput-Bool {
     return ($result -eq 'Yes')
 }
 
-function Save-File {
+function Save-ExcelFile {
     [CmdletBinding()]
     Param(
         [Parameter(Mandatory=$true)]
