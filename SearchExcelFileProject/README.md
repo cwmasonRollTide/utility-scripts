@@ -1,17 +1,21 @@
 # Excel Search Tool
 
 ## Table of Contents
-1. [Introduction](#introduction)
-2. [Features](#features)
-3. [Installation](#installation)
-4. [Usage](#usage)
-   - [Using PowerShell Script](#using-powershell-script)
-   - [Using Executable](#using-executable)
-5. [Building Executable](#building-executable)
-5. [How It Works](#how-it-works)
-6. [Troubleshooting](#troubleshooting)
-7. [Contributing](#contributing)
-8. [License](#license)
+
+- [Excel Search Tool](#excel-search-tool)
+  - [Table of Contents](#table-of-contents)
+  - [Introduction](#introduction)
+  - [Features](#features)
+  - [Installation](#installation)
+  - [Usage](#usage)
+    - [Using PowerShell Script](#using-powershell-script)
+    - [Using Executable](#using-executable)
+  - [Building Executable](#building-executable)
+  - [How It Works](#how-it-works)
+  - [Troubleshooting](#troubleshooting)
+  - [Dependencies](#dependencies)
+  - [Contributing](#contributing)
+  - [License](#license)
 
 ## Introduction
 
@@ -27,15 +31,28 @@ The Excel Search Tool is a utility to search for similar strings/values within E
 
 ## Installation
 
-1. Ensure you have PowerShell 5.1 or later installed on your Windows machine.
+1. Download the project:
+   - Go to https://github.com/cwmasonRollTide/utility-scripts
+   - Click the green "Code" button, then "Download ZIP"
+   - Extract the ZIP file to a location you can easily find (e.g., Desktop)
 
-2. Download the project files or clone the repository to your local machine.
+2. Ensure you have PowerShell 5.1 or later:
+   - Press Win + X, select "Windows PowerShell" or "PowerShell"
+   - Run this command to check your version:
 
-3. If you plan to use the PowerShell script directly, make sure you have the required modules installed:
+     ```powershell
+     $PSVersionTable.PSVersion
+     ```
 
-```powershell
-Install-Module -Name ImportExcel -Scope CurrentUser -Force
-```
+   - If lower than 5.1, update PowerShell from Microsoft's website
+
+3. Install required module:
+   - Open PowerShell as administrator
+   - Run this command:
+
+     ```powershell
+     Install-Module -Name ImportExcel -Scope CurrentUser -Force
+     ```
 
 ## Usage
 
@@ -43,24 +60,46 @@ Install-Module -Name ImportExcel -Scope CurrentUser -Force
 
 1. Clone or download the project directory
 
+   ```powershell
+   git clone https://github.com/cwmasonRollTide/utility-scripts.git
+   ```
+
+   OR
+
+   Download the project:
+   - Go to https://github.com/cwmasonRollTide/utility-scripts
+   - Click the green "Code" button, then "Download ZIP"
+   - Extract the ZIP file to a location you can easily find (e.g., Desktop)
+
 2. Open PowerShell:
    - Press `Win + X` and select "Windows PowerShell" or "PowerShell" from the menu.
    - Alternatively, search for "PowerShell" in the Start menu and open it.
 
 3. Navigate to the project directory:
-   ```powershell
-   cd path\to\project\directory
-   ```
-   - example: if you downloaded to your desktop, 
 
    ```powershell
-    cd C:\Users\Name\Desktop\utility-scripts\SearchExcelFileProject
+   cd ~\utility-scripts\SearchExcelFileProject
+   ```
+
+   - example: if you downloaded to your desktop,
+
+   ```powershell
+    cd C:\Users\<Your Username>\Desktop\utility-scripts\SearchExcelFileProject
    ```
 
 4. Run the script:
+
    ```powershell
    .\Search-ExcelFileWithUI.ps1
    ```
+
+   - NOTE: You may need to run:
+  
+      ```powershell
+      Set-ExecutionPolicy RemoteSigned
+      ```
+
+   if you get an error about permissions or it doesn't run
 
 5. Follow the on-screen prompts to select your Excel file, enter search parameters, and view results.
 
@@ -80,15 +119,17 @@ Due to difficulties (*cough* *cough* skill issues) there is a different version 
 in the SearchExcelFileProject/ExeFiles directory. This makes it simpler to use the ps2exe utility to convert the powershell scripts into an .exe
 
 1. Navigate to the project directory:
-```powershell
-cd ~\utility-scripts\SearchExcelFileProject
-```
+
+   ```powershell
+   cd ~\utility-scripts\SearchExcelFileProject
+   ```
 
 2. Install the necessary modules
-```powershell
-Install-Module -Name ps2exe -Scope CurrentUser -Force
-Install-Module -Name ImportExcel -Scope CurrentUser -Force
-```
+
+   ```powershell
+   Install-Module -Name ps2exe -Scope CurrentUser -Force
+   Install-Module -Name ImportExcel -Scope CurrentUser -Force
+   ```
 
 3. Define your variables and run the command to make your desired .exe file!
 
@@ -125,18 +166,18 @@ Install-Module -Name ImportExcel -Scope CurrentUser -Force
 
 - Ensure that your Excel file is not open in another program when running the search.
 
-- Check if your data is "clean" or if it has a bunch of funny characters in there. 
+- Check if your data is "clean" or if it has a bunch of funny characters in there.
 
 - Have you tried unplugging it and plugging it back in
 
 ## Dependencies
 
-- [ImportExcel](https://www.powershellgallery.com/packages/ImportExcel/7.8.6)
-   * This tool makes it incredibly simple to import excel files and process them quickly 
-   and it wasn't built into powershell initially. 
+- [Import Excel](https://www.powershellgallery.com/packages/ImportExcel/7.8.6)
+  - This tool makes it incredibly simple to import excel files and process them quickly
+   and it wasn't built into powershell initially
 
-- [ps2exe](https://www.powershellgallery.com/packages/ps2exe/1.0.13)
-   * 
+- [Ps2 Exe](https://www.powershellgallery.com/packages/ps2exe/1.0.13)
+  - This tool makes it incredibly simple to convert a powershell script into an executable
 
 ## Contributing
 
