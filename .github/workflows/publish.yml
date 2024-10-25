@@ -1,0 +1,30 @@
+name: Publish PowerShell Modules
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  publish:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up PowerShell
+        uses: pwsh/pwsh@v1
+
+      - name: Install PowerShellGet
+        run: |
+          Install-Module -Name PowerShellGet -Force -AllowClobber
+
+      - name: Publish Modules
+        env:
+          NUGET_KEY: ${{ secrets.NUGET_KEY }}
+        run: |
+          $modules = @("Open-File", "Save-File", "Get-LargeTextInput", "Compare-Strings")
+          foreach ($module in $modules) {
+            Publish-Module -Path ".\$module" -ApiKey $env:POWERSHELL_GALLERY_API_KEY -Force
+          }
