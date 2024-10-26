@@ -12,9 +12,6 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-
-      - name: Set up PowerShell
-        uses: actions/powershell-setup@v2
           
       - name: Install PowerShellGet
         run: |
