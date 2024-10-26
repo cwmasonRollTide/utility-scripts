@@ -6,7 +6,7 @@ function Search-ExcelContent {
         Finds matching strings within a specified tolerance in an excel file. Either returns the entire rows or just the matching values.
 
     .DESCRIPTION
-        The Search-ExcelContent { function searches for matching strings within a specified tolerance in an excel file. 
+        The Search-ExcelContent function searches for matching strings within a specified tolerance in an excel file. 
         It compares the search value with the values in the specified column of the excel file and returns either the matching strings or the entire row.
 
     .PARAMETER selectedFile
@@ -25,11 +25,11 @@ function Search-ExcelContent {
         Boolean value specifying whether to return the entire row of data or just the matching value you're looking for
 
     .EXAMPLE
-        Search-ExcelContent {-selectedFile "C:\path\to\file.excel" -searchVal "apple" -columnName "Fruit" -tolerance 2 -returnWholeRow "y"
+        Search-ExcelContent -selectedFile "C:\path\to\file.excel" -searchVal "apple" -columnName "Fruit" -tolerance 2 -returnWholeRow "y"
         This example searches for the value "apple" within the "Fruit" column of the excel file located at "C:\path\to\file.excel". It allows a tolerance of 2 characters for string comparison and returns the entire row for each matching string.
 
     .EXAMPLE
-        Search-ExcelContent {-selectedFile "C:\path\to\file.excel" -searchVal "banana" -columnName "Fruit" -tolerance 1 -returnWholeRow "n"
+        Search-ExcelContent -selectedFile "C:\path\to\file.excel" -searchVal "banana" -columnName "Fruit" -tolerance 1 -returnWholeRow "n"
         This example searches for the value "banana" within the "Fruit" column of the excel file located at "C:\path\to\file.excel". It allows a tolerance of 1 character for string comparison and returns only the matching value for each match.
 
     .OUTPUTS
