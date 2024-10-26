@@ -1,6 +1,6 @@
 @{
     RootModule = 'Save-File.psm1'
     ModuleVersion = '1.0'
-    Author = 'Your Name'
-    Description = 'PowerShell module to save files'
+    Author = 'Connor Mason'
+    Description = 'Easy to use module for saving data to a file of the following types: .xlsx ,.xls ,.csv ,.json ,.xml ,.txt.,All Files'
 }

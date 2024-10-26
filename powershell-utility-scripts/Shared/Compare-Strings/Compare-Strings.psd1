@@ -1,6 +1,6 @@
 @{
     RootModule = 'Compare-Strings.psm1' 
     ModuleVersion = '1.0'
-    Author = 'Your Name'
-    Description = 'PowerShell module to compare strings'
+    Author = 'Connor Mason'
+    Description = 'An algorithm to compare strings given a tolerance of error. Probably exists already as well'
 }

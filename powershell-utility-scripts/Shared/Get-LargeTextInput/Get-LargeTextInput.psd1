@@ -1,6 +1,6 @@
 @{
     RootModule = 'Get-LargeTextInput.psm1'
     ModuleVersion = '1.0'
-    Author = 'Your Name' 
-    Description = 'PowerShell module to get large text input'
+    Author = 'Connor Mason' 
+    Description = 'A kind of gross, 90s looking box that accepts text from a user that people are welcome to use :D'
 }
