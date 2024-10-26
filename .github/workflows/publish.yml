@@ -23,5 +23,5 @@ jobs:
         run: |
           $modules = @("Open-File", "Save-File", "Get-LargeTextInput", "Compare-Strings", "Search-ExcelContent")
           foreach ($module in $modules) {
-            Publish-Module -Force -Name $module -NuGetApiKey $env:NUGET_KEY -Path "/powershell-utility-scripts/Shared/$module" 
+            Publish-Module -Path "/powershell-utility-scripts/Shared/$module" -Force
           }
