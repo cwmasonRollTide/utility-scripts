@@ -11,18 +11,13 @@ Welcome to my collection of utility scripts and project starter templates! This 
 The repository is organized into the following main directories:
 
 - `powershell-utility-scripts/`: Contains standalone utility scripts, organized by topic or technology.
-- `project-setup-scripts/`: Contains scripts to generate project starter templates.
+- `project-setup/`: Contains scripts to generate project starter templates.
 
 Each script or skeleton will have its own dedicated directory with a README explaining its purpose and usage.
 
 ## 🌟 Featured Scripts
 
 Here are some of the key scripts available in this repository:
-
-### Utilities
-
-- 🔍 **[Search Excel Files](utilities/search-excel-files/)**: Quickly search for content across multiple Excel files.
-- ⚡ **[PowerShell Utilities](utilities/powershell-utilities/)**: A collection of helpful PowerShell scripts and modules.
 
 ## 🤝 Contributing
 
@@ -34,3 +29,7 @@ If you have any questions, suggestions, or feedback, please feel free to open an
 Email: <connor.mason@fivemconsulting.com>
 
 Happy scripting! 😄
+
+## 📜 License
+
+This repository is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
