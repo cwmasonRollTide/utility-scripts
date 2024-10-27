@@ -6,7 +6,13 @@
     RootModule         = 'ImportExcel.psm1'
 
     # Version number of this module.
-    ModuleVersion      = '7.8.9'
+    
+            $major = [int]$matches[2]
+            $minor = [int]$matches[3]
+            $build = [int]$matches[4]
+            $newVersion = "{0}.{1}.{2}" -f $major, $minor, ($build + 1)
+            return '{0}{1}{2}' -f $matches[1], $newVersion, $matches[5]
+        
 
     # ID used to uniquely identify this module
     GUID               = '60dd4136-feff-401a-ba27-a84458c57ede'
