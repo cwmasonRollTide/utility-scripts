@@ -116,11 +116,3 @@ PrivateData = @{
 # DefaultCommandPrefix = ''
 
 }
-
-
-
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 8f4f318bde6bfe3435c96732e5c46e3e011bd6a2
