@@ -29,7 +29,6 @@ function Search-ExcelFileWithUI {
     #>
     [CmdletBinding()]
     Param()
-
     $initialDirectory = Get-StartLocation
     $selectedFile = Open-File `
         -Title "Select the Input Excel File" `

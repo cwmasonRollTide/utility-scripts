@@ -40,6 +40,7 @@ function Open-File {
     $openFileDialog.Filter = $fileTypeFilter
     $openFileDialog.initialDirectory = $initialDirectory
     $result = $openFileDialog.ShowDialog()
+    
     if ($result -eq [System.Windows.Forms.DialogResult]::OK) {
         $selectedFile = $openFileDialog.FileName
         Write-Host "File selected: $selectedFile"

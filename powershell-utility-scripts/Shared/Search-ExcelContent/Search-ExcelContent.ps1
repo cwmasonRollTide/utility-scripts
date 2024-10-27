@@ -52,7 +52,6 @@ function Search-ExcelContent {
     Write-Host "Searching for matches... This may take a while for large datasets."
     Write-Host "Search value: '$searchVal', Column: '$columnName', Tolerance: $tolerance"
     Write-Host "-------------------------------------------"
-
     foreach ($row in $excelData) {
         $currentVal = $row.$columnName
         if (Compare-Strings -Str1 $searchVal -Str2 $currentVal -Tolerance $tolerance) {

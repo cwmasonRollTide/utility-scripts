@@ -31,7 +31,6 @@ function Compare-Strings {
    $differences = 0
    $maxLength = [Math]::Max($str1.Length, $str2.Length)
    $minLength = [Math]::Min($str1.Length, $str2.Length)
-
    for ($i = 0; $i -lt $maxLength; $i++) {
       if ($i -lt $minLength) {
          if ($str1[$i] -ne $str2[$i]) {
