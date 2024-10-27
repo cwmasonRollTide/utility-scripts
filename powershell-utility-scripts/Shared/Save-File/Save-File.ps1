@@ -99,6 +99,7 @@ function Save-File {
         $filePath = $saveFileDialog.FileName
         $fileExtension = [System.IO.Path]::GetExtension($filePath).ToLower()
         $contentType = $content.GetType().Name
+
         try {
             if ($exportMethods.ContainsKey($fileExtension)) {
                 $method = $exportMethods[$fileExtension]
@@ -124,9 +125,3 @@ function Save-File {
         return $null
     }
 }
-
-
-
-
-
-

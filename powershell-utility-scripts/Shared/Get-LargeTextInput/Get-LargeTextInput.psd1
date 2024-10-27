@@ -13,12 +13,7 @@
 
 # Version number of this module.
 
-            $major = [int]$matches[2]
-            $minor = [int]$matches[3]
-            $build = [int]$matches[4]
-            $newVersion = "{0}.{1}.{2}" -f $major, $minor, ($build + 1)
-            return '{0}{1}{2}' -f $matches[1], $newVersion, $matches[5]
-        
+ModuleVersion = '1.0.0'
 
 # Supported PSEditions
 # CompatiblePSEditions = @()

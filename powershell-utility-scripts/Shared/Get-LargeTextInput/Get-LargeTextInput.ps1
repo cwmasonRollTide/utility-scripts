@@ -103,6 +103,7 @@ function Get-LargeTextInput {
     $panel.Controls.Add($cancelButton)
 
     $form.Add_Shown({$textBox.Select()})
+
     do {
         $result = $form.ShowDialog()
         if ($result -eq [System.Windows.Forms.DialogResult]::OK) {
@@ -117,9 +118,3 @@ function Get-LargeTextInput {
         }
     } while ($true)
 }
-
-
-
-
-
-
