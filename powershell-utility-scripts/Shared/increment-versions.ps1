@@ -25,3 +25,13 @@ Get-ChildItem -Path $baseDir -Include *.psd1 -Recurse | ForEach-Object {
         Write-Host "Incremented ModuleVersion in $filePath"
     }
 }
+<<<<<<< HEAD
+=======
+
+
+
+
+
+
+
+>>>>>>> 863ccec85f4b03940c0cfe8027a06c70fa3cddf0
