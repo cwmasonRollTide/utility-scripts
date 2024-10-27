@@ -1,4 +1,4 @@
-{
+@{
     RootModule = 'Open-File.psm1'
     ModuleVersion = '1.0'
     Author = 'Connor Mason'
