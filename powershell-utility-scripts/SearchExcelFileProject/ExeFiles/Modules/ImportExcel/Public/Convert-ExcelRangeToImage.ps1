@@ -57,3 +57,4 @@ Convert-ExcelRangeToImage -Path $Path -WorksheetName $worksheetName -range $rang
 
 #Convert-ExcelRangeToImage -Path $Path -WorksheetName $worksheetName -range $range -destination  "$pwd\temp.png"  -show
 
+

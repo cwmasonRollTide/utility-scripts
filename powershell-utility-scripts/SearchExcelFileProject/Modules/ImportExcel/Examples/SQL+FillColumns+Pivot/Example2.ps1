@@ -23,3 +23,4 @@ Set-ExcelRange -Worksheet $ws -Range "F2:G50" -NumberFormat "0.0%"
 $chart = New-ExcelChartDefinition  -NoLegend -ChartType XYScatter -XRange WinsToFast -YRange WinsToPoles -Column 7 -Width 2000 -Height 700 -Title "Poles vs fastlaps"
 Export-Excel -ExcelPackage $Excel -WorkSheetname "Winners" -ExcelChartDefinition $chart -Show
 
+

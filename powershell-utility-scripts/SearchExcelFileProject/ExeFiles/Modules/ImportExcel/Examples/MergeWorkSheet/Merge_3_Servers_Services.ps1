@@ -35,3 +35,4 @@ $s | Export-Excel -Path $env:temp\server3.xlsx
 
 Merge-MultipleSheets -Path "$env:temp\server1.xlsx", "$env:temp\Server2.xlsx","$env:temp\Server3.xlsx" -OutputFile "$env:temp\combined3.xlsx"  -Property name,displayname,startType -Key name  -Show
 
+

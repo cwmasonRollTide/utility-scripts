@@ -24,3 +24,4 @@ $cd = New-ExcelChartDefinition -XRange Region -YRange TotalSold -ChartType Colum
 $data | Export-Excel $xlSourcefile -ExcelChartDefinition $cd -AutoNameRange -Show
 
 
+

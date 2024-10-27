@@ -8,3 +8,4 @@ $columnOptions += New-ColumnOption -ColumnName Activity -formatter lineFormatter
 
 ConvertFrom-Excel -ExcelFile $PSScriptRoot\test.xlsx -outFile $PSScriptRoot\targetout.html -columnOptions $columnOptions
 
+

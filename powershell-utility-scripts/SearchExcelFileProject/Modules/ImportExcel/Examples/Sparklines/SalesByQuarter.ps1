@@ -24,3 +24,4 @@ $null = $ws.SparklineGroups.Add( $sparkLineType, $ws.Cells["F5"], $ws.Cells["B5:
 
 Close-ExcelPackage $excel -Show
 
+

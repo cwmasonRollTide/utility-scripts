@@ -11,3 +11,4 @@ $(
     New-PSItem =7%/12 60 500000 "=pmt(rate,nper,pv)"
 ) | Export-Excel "$env:temp\functions.xlsx" -AutoNameRange -AutoSize -Show
 
+

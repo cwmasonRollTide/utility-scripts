@@ -46,3 +46,4 @@ $ptdef = New-PivotTableDefinition -PivotTableName "Summary" -PivotRows "Store" -
 Join-Worksheet -Path $xlSourcefile -WorkSheetName "Total" -Clearsheet -FromLabel "Store" -TableName "Combined" -TableStyle Light1 -AutoSize -BoldTopRow -FreezePane 2,1 -Title "Store Sales Summary" -TitleBold -TitleSize 14  -PivotTableDefinition $ptdef -show
 
 
+
