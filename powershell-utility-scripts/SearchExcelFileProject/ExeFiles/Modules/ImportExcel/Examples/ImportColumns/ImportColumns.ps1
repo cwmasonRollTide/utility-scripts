@@ -13,3 +13,4 @@ Import-Excel -Path $xlFile -ImportColumns @(6,7,12,25,46) | Format-Table -AutoSi
 
 
 
+
