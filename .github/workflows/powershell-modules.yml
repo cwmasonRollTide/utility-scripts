@@ -1,4 +1,4 @@
-name: Build PowerShell Module Manifests
+name: PowerShell Modules CI/CD
 
 on:
   push:
@@ -38,7 +38,7 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         branch: ${{ github.ref }}
       
-  publish:
+  build-manifests:
     needs: increment-versions
     runs-on: windows-latest
     steps:
@@ -49,5 +49,21 @@ jobs:
         run: |
           Install-Module -Name PowerShellGet -Force -AllowClobber
 
-      - name: Publish Modules
+      - name: Build Manifests
         run: powershell-utility-scripts/Shared/rebuild-manifest.ps1
+
+  publish:
+    needs: build-manifests
+    runs-on: windows-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+          
+      - name: Install PowerShellGet
+        run: |
+          Install-Module -Name PowerShellGet -Force -AllowClobber
+
+      - name: Publish Modules
+        env:
+          NUGET_KEY: ${{ secrets.NUGET_KEY }}  
+        run: powershell-utility-scripts/Shared/publish.ps1
