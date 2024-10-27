@@ -20,4 +20,5 @@ jobs:
         env:
           NUGET_KEY: ${{ secrets.NUGET_KEY }}  
         run: |
+          powershell-utility-scripts/Shared/rebuild-manifest.ps1
           powershell-utility-scripts/Shared/publish.ps1 

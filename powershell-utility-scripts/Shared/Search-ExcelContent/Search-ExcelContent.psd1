@@ -1,4 +1,4 @@
-function Seard-ExcelContent {
+function Search-ExcelContent {
     param (
         [string]$FilePath
     )

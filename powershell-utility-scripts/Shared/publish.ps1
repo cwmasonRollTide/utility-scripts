@@ -1,4 +1,4 @@
-$modules = @(
+$modules = @( # Keep the list of modules to be published here because it is easier to maintain and update
     "Open-File", 
     "Save-File", 
     "Compare-Strings", 
