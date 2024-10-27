@@ -1,4 +1,4 @@
-﻿# To ship, is to choose
+# To ship, is to choose
 
 #ipmo .\ImportExcel.psd1 -Force
 
@@ -28,3 +28,4 @@ Remove-Item $file -ErrorAction Ignore
 
 $gsv| Export-Excel -Path $file -AutoSize -WorkSheetname Services
 $ps | Export-Excel -Path $file -AutoSize -WorkSheetname Processes -PivotTableDefinition $pt -Show
+

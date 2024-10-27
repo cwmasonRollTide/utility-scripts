@@ -1,4 +1,4 @@
-﻿function Import-UPS {
+function Import-UPS {
     [CmdletBinding()]
     param(
         $TrackingNumber,

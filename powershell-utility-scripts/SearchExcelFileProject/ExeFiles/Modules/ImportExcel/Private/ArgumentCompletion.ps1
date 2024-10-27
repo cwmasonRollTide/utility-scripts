@@ -1,4 +1,4 @@
-﻿function ColorCompletion {
+function ColorCompletion {
     param($commandName, $parameterName, $wordToComplete, $commandAst, $fakeBoundParameter)
     [System.Drawing.KnownColor].GetFields() | Where-Object {$_.IsStatic -and $_.name -like "$wordToComplete*" } |
         Sort-Object name | ForEach-Object {New-CompletionResult $_.name $_.name
@@ -130,3 +130,4 @@ if   (Get-Command -ErrorAction SilentlyContinue -name Register-ArgumentCompleter
     Register-ArgumentCompleter -CommandName Add-ExcelChart             -ParameterName YAxisNumberformat      -ScriptBlock $Function:NumberFormatCompletion
     Register-ArgumentCompleter -CommandName Import-Excel               -ParameterName WorksheetName          -ScriptBlock $Function:WorksheetArgumentCompleter
 }
+

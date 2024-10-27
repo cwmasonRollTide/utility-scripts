@@ -1,4 +1,4 @@
-﻿function Open-ExcelPackage {
+function Open-ExcelPackage {
     [CmdLetBinding()]
     [Diagnostics.CodeAnalysis.SuppressMessageAttribute("PSAvoidUsingPlainTextForPassword", "")]
     [OutputType([OfficeOpenXml.ExcelPackage])]
@@ -47,3 +47,4 @@
     }
     else { Write-Warning "Could not find $path" }
 }
+

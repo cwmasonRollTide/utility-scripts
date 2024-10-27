@@ -12,3 +12,4 @@ remove-item `$f -ErrorAction Ignore
 "@
         $text | Set-Content -Encoding Ascii "Highlight-$($_).ps1"
     }
+

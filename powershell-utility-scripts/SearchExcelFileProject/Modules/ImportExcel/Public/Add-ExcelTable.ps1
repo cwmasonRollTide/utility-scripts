@@ -124,3 +124,4 @@ function Add-ExcelTable {
     }
     catch {Write-Warning -Message "Failed adding table '$TableName' to worksheet '$WorksheetName': $_"}
 }
+

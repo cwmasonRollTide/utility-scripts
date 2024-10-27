@@ -1,4 +1,4 @@
-﻿function Expand-NumberFormat {
+function Expand-NumberFormat {
     [CmdletBinding()]
     [OutputType([String])]
     param  (
@@ -46,3 +46,4 @@
         Default         {return  $NumberFormat}
     }
 }
+

@@ -14,3 +14,4 @@ $data = $(
 )
 #Number format can expand terms like Currency, to the local currency format
 $data | Export-Excel -Path $file -Show -AutoSize -NumberFormat 'Currency'
+

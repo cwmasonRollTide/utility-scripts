@@ -1,4 +1,4 @@
-﻿function Get-ExcelWorkbookInfo {
+function Get-ExcelWorkbookInfo {
     [CmdletBinding()]
     param (
         [Alias('FullName')]
@@ -25,3 +25,4 @@
         }
     }
 }
+

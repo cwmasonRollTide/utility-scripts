@@ -1,4 +1,4 @@
-﻿function Join-Worksheet {
+function Join-Worksheet {
     [CmdletBinding(DefaultParameterSetName = 'Default')]
     param (
         [Parameter(ParameterSetName = "Default", Position = 0)]

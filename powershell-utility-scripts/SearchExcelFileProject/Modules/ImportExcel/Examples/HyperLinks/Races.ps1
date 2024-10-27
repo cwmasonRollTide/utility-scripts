@@ -26,3 +26,4 @@ foreach ($r in $results) {
 $results | ForEach-Object {(New-Object -TypeName OfficeOpenXml.ExcelHyperLink -ArgumentList "Sheet1!$($_.Name)" , "$($_.name) GP")} |
             Export-Excel -ExcelPackage $excel -AutoSize  -Show
 
+

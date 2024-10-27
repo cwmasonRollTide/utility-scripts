@@ -191,3 +191,4 @@ Set-Location "../.."
 Set-Location "Backend"
 dotnet restore
 Write-Host "Finished!"
+

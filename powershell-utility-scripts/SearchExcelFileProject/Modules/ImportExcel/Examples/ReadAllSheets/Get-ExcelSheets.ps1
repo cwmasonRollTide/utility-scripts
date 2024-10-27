@@ -1,4 +1,4 @@
-﻿# Get-ExcelSheets
+# Get-ExcelSheets
 
 param(
     [Parameter(Mandatory)]

@@ -18,3 +18,4 @@ Get-ChildItem -Path $baseDir -Include *.ps1 -Recurse | ForEach-Object {
         Write-Host "Incremented ModuleVersion in $filePath"
     }
 }
+

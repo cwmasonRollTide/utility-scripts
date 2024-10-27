@@ -1,4 +1,4 @@
-﻿function Add-ExcelDataValidationRule {
+function Add-ExcelDataValidationRule {
     [CmdletBinding()]
     param(
         [Parameter(ValueFromPipeline = $true,Position=0)]
@@ -56,3 +56,4 @@
         if ($ErrorStyle)  {$validation.ErrorStyle  = $ErrorStyle}
     }
  }
+

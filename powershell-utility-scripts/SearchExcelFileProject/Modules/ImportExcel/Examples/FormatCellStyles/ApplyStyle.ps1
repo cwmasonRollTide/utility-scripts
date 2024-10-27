@@ -1,4 +1,4 @@
-﻿try {Import-Module $PSScriptRoot\..\..\ImportExcel.psd1} catch {throw ; return}
+try {Import-Module $PSScriptRoot\..\..\ImportExcel.psd1} catch {throw ; return}
 
 $data = ConvertFrom-Csv @'
 Item,Quantity,Price,Total Cost

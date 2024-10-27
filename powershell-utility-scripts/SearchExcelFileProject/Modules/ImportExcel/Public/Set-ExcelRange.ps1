@@ -1,4 +1,4 @@
-﻿function Set-ExcelRange {
+function Set-ExcelRange {
     [CmdletBinding()]
     [Alias("Set-Format")]
     [Diagnostics.CodeAnalysis.SuppressMessageAttribute('PSUseShouldProcessForStateChangingFunctions', '',Justification='Does not change system state')]
@@ -198,3 +198,4 @@
         }
     }
 }
+

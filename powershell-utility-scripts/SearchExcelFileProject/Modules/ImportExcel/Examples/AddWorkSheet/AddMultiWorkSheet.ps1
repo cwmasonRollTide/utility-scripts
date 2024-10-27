@@ -13,3 +13,4 @@ Remove-Item $xlSourcefile -ErrorAction Ignore
 
 #Add another tab.  Replace the $TabData3 with your data
 1..15  | Export-Excel $xlSourcefile -WorksheetName 'Tab 3' -AutoSize -AutoFilter -Show
+

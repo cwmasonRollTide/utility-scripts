@@ -1,4 +1,4 @@
-﻿try {Import-Module $PSScriptRoot\..\..\ImportExcel.psd1} catch {throw ; return}
+try {Import-Module $PSScriptRoot\..\..\ImportExcel.psd1} catch {throw ; return}
 
 $xlFile="$env:TEMP\testPivot.xlsx"
 Remove-Item $xlFile -ErrorAction Ignore

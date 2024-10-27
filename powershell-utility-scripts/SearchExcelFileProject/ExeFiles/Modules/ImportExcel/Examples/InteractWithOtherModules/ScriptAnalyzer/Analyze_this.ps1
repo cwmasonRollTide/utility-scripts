@@ -60,3 +60,4 @@ end {
     }   |       Export-Excel @xlparams
     Write-Progress -Activity "Running Script Analyzer" -Completed
 }
+

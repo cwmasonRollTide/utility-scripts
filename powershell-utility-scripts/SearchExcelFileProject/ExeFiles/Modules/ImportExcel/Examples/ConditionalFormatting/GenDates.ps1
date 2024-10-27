@@ -22,3 +22,4 @@ New-PSItem (Get-DateOffset)     (Get-Number) 'Today,ThisMonth,ThisWeek'
 New-PSItem (Get-DateOffset -6)  (Get-Number) 'LastWeek,Last7Days,ThisMonth'
 New-PSItem (Get-DateOffset -2)  (Get-Number) 'Last7Days,ThisMonth,ThisWeek'
 New-PSItem (Get-DateOffset 1)  (Get-Number) 'Tomorrow,ThisMonth,ThisWeek'
+

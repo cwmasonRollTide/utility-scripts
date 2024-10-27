@@ -1,4 +1,4 @@
-﻿[Diagnostics.CodeAnalysis.SuppressMessageAttribute('PSPossibleIncorrectComparisonWithNull', '', Justification = 'Intentional use to select non null array items')]
+[Diagnostics.CodeAnalysis.SuppressMessageAttribute('PSPossibleIncorrectComparisonWithNull', '', Justification = 'Intentional use to select non null array items')]
 [CmdletBinding(DefaultParameterSetName = 'Default')]
 param(
   [Parameter(Position = 0)]
@@ -145,3 +145,4 @@ $endRow = $ws.Dimension.End.Row
 Add-ConditionalFormatting -WorkSheet $ws -range "L2:L$endrow" -RuleType ContainsText -ConditionValue "Failure" -BackgroundPattern None -ForegroundColor Red   -Bold
 Add-ConditionalFormatting -WorkSheet $ws -range "L2:L$endRow" -RuleType ContainsText -ConditionValue "Success" -BackgroundPattern None -ForeGroundColor Green
 Close-ExcelPackage -ExcelPackage $excel  -Show:$show
+

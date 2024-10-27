@@ -8,3 +8,4 @@ $(
     New-PSItem '=Hyperlink("http://blogs.technet.com/b/heyscriptingguy/","Hey, Scripting Guy")'
 
 ) | Export-Excel "$env:temp\hyperlink.xlsx" -AutoSize -Show
+

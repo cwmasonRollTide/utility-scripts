@@ -1,4 +1,4 @@
-﻿#requires -modules "Get-IndexedItem"
+#requires -modules "Get-IndexedItem"
 [CmdletBinding()]
 Param()
 Remove-Item ~\documents\music.xlsx -ErrorAction SilentlyContinue
@@ -39,3 +39,4 @@ $pt.DataFields[1].Name   = 'Tracks'
 $stopwatch.Stop()
 Write-Verbose -Message ("Pivot Done: " + $stopwatch.Elapsed.TotalSeconds)
 Close-ExcelPackage -show $excel
+

@@ -1,4 +1,4 @@
-﻿function Export-StocksToExcel {
+function Export-StocksToExcel {
     param(
         [string]$symbols,
         [ValidateSet("Open", "High", "Low", "Close", "Volume")]

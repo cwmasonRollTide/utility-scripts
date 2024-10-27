@@ -1,4 +1,4 @@
-﻿function Convert-ExcelRangeToImage {
+function Convert-ExcelRangeToImage {
     [alias("Convert-XlRangeToImage")]
     param (
         [parameter(Mandatory=$true)]

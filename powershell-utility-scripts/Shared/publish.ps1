@@ -12,3 +12,4 @@ foreach ($module in $modules) {
         -Path "$scriptDir/$module" `
         -NuGetApiKey $env:NUGET_KEY 
 }
+

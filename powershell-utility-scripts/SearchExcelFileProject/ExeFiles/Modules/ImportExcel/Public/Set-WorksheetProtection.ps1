@@ -1,4 +1,4 @@
-﻿function Set-WorksheetProtection {
+function Set-WorksheetProtection {
     [CmdletBinding()]
     [Diagnostics.CodeAnalysis.SuppressMessageAttribute('PSUseShouldProcessForStateChangingfunctions', '',Justification='Does not change system state')]
     param (

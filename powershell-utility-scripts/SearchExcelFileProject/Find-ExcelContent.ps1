@@ -78,3 +78,4 @@ function Find-ExcelContent {
     Write-Host "Search complete. Total matches found: $matchCount"
     return $matchingStringsResults
 }
+

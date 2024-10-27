@@ -15,3 +15,4 @@ Get-NetAdapter  |
 
 #Create a summary page with a title of Summary, label the blocks with the name of the sheet they came from and hide the source sheets
 Join-Worksheet -Path $xlSourcefile -HideSource -WorkSheetName Summary -NoHeader -LabelBlocks  -AutoSize -Title "Summary" -TitleBold -TitleSize 22 -show
+

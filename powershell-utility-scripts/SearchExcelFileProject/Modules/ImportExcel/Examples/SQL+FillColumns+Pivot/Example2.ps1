@@ -1,4 +1,4 @@
-﻿#requires -modules "getSql"
+#requires -modules "getSql"
 
 try {Import-Module $PSScriptRoot\..\..\ImportExcel.psd1} catch {throw ; return}
 #download f1Results from https://1drv.ms/f/s!AhfYu7-CJv4egbt5FD7Cdxi8jSz3aQ  and update the path below

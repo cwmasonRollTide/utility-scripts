@@ -1,4 +1,4 @@
-﻿try {Import-Module $PSScriptRoot\..\..\ImportExcel.psd1} catch {throw ; return}
+try {Import-Module $PSScriptRoot\..\..\ImportExcel.psd1} catch {throw ; return}
 
 $sql           = @"
   SELECT     rootfile.baseName     ,  rootfile.extension   , Image.fileWidth         AS width             ,  image.fileHeight AS height ,
@@ -85,4 +85,5 @@ Set-ExcelColumn   -ExcelPackage $Excel -WorkSheetname "Winners" -column 7  -Head
 #Define a chart to show the relationship of lest on an XY Grid, create the ranges required in the, add the chart and show the file in Excel in excel after saving.
 $chart = New-ExcelChartDefinition -NoLegend -ChartType XYScatter -XRange WinsToFast -YRange WinsToPoles -ShowCategory -Column 7 -Width 2000 -Height 700
 Export-Excel -ExcelPackage $Excel -WorkSheetname "Winners" -AutoNameRange -ExcelChartDefinition $chart -Show
+
 

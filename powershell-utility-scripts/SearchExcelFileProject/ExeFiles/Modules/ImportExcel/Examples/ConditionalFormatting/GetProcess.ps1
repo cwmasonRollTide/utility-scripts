@@ -20,3 +20,4 @@ Get-Process | Where-Object Company | Select-Object Company, Name, PM, Handles, *
             New-ConditionalText authors -BackgroundColor LightBlue -ConditionalTextColor Black
             New-ConditionalText nvidia  -BackgroundColor LightGreen -ConditionalTextColor Black
         )
+

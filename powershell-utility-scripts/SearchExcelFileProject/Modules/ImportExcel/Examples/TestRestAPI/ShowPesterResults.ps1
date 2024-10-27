@@ -1,4 +1,4 @@
-﻿function Show-PesterResults {
+function Show-PesterResults {
     [Diagnostics.CodeAnalysis.SuppressMessageAttribute("PSUseSingularNouns", "", Justification="No suitable singular")]
     Param()
     $xlfilename = ".\test.xlsx"

@@ -1,4 +1,4 @@
-﻿function Set-ExcelColumn {
+function Set-ExcelColumn {
     [CmdletBinding()]
     [Alias("Set-Column")]
     [OutputType([OfficeOpenXml.ExcelColumn],[String])]

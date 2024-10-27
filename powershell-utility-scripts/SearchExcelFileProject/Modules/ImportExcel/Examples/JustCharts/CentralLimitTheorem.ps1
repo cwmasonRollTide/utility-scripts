@@ -1,4 +1,4 @@
-﻿try {Import-Module $PSScriptRoot\..\..\ImportExcel.psd1} catch {throw ; return}
+try {Import-Module $PSScriptRoot\..\..\ImportExcel.psd1} catch {throw ; return}
 
 ColumnChart -Title "Central Limit Theorem" -NoLegend ($(
         for ($i = 1; $i -le 500; $i++) {

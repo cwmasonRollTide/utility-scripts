@@ -1,4 +1,4 @@
-﻿<#
+<#
   Fixed Rate Loan/Mortgage Calculator in Excel
 #>
 

@@ -1,4 +1,4 @@
-﻿function Merge-MultipleSheets {
+function Merge-MultipleSheets {
      [CmdletBinding()]
      [Diagnostics.CodeAnalysis.SuppressMessageAttribute('PSUseDeclaredVarsMoreThanAssignments', '', Justification="False positives when initializing variable in begin block")]
      [Diagnostics.CodeAnalysis.SuppressMessageAttribute('PSUseSingularNouns', '', Justification="MultipleSheet would be incorrect")]
@@ -145,3 +145,4 @@
          Write-Progress -Activity "Merging sheets" -Completed
      }
  }
+

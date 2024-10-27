@@ -1,4 +1,4 @@
-﻿try {Import-Module $PSScriptRoot\..\..\ImportExcel.psd1} catch {throw ; return}
+try {Import-Module $PSScriptRoot\..\..\ImportExcel.psd1} catch {throw ; return}
 
 #Get rid of pre-exisiting sheet
 $xlSourcefile = "$env:TEMP\ImportExcelExample.xlsx"
@@ -28,4 +28,5 @@ $cd = New-ExcelChartDefinition `
     -ChartTrendLine Linear
 
 $data | Export-Excel $xlSourcefile -Show -AutoNameRange -AutoSize -TableName Visitors -ExcelChartDefinition $cd
+
 

@@ -13,3 +13,4 @@ function Get-ExcelSheetDimensionAddress {
 
     $Worksheet.Dimension.Address
 }
+

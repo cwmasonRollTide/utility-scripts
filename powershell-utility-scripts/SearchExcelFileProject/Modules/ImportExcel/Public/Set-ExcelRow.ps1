@@ -1,4 +1,4 @@
-﻿function  Set-ExcelRow {
+function  Set-ExcelRow {
     [CmdletBinding()]
     [Alias("Set-Row")]
     [OutputType([OfficeOpenXml.ExcelRow],[String])]

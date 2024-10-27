@@ -12,3 +12,4 @@ $(
     New-PSItem 12010 Drill  20  8    =C5*D5
     New-PSItem 12011 Crowbar 7 23.48 =C6*D6
 ) | Export-Excel "$env:temp\functions.xlsx"-AutoSize -Show
+

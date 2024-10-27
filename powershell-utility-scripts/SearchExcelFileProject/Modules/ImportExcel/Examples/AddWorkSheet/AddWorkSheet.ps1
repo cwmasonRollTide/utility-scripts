@@ -11,3 +11,4 @@ $excel = 1..10 | Export-Excel $xlSourcefile -PassThru
 Add-Worksheet -ExcelPackage $excel -WorkSheetname "NewSheet" -CopySource $excel.Workbook.Worksheets["Sheet1"]
 #Save and open in Excel
 Close-ExcelPackage -ExcelPackage $excel -Show
+

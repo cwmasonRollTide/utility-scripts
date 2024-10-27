@@ -15,3 +15,4 @@ $c = New-ExcelChartDefinition -Title "ProcessStats" `
 
 $data |
     Export-Excel -Path $xlSourcefile -AutoSize -TableName Processes -ExcelChartDefinition $c  -Show
+

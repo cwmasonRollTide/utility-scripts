@@ -54,3 +54,4 @@ function ConvertFrom-ExcelToSQLInsert {
         "INSERT INTO {0} ({1}) Values({2});" -f $TableName, $ColumnNames, $targetValues
     }
 }
+

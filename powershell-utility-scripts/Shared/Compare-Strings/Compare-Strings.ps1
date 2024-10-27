@@ -48,3 +48,4 @@ function Compare-Strings {
 
    return $differences -le $tolerance
 }
+

@@ -1,4 +1,4 @@
-﻿<#
+<#
     .Synopsis
         Exports the charts in an Excel spreadSheet
     .Example
@@ -49,3 +49,4 @@ foreach ($excelWorkSheet in $excelWorkBook.Worksheets) {
 $excelApp.DisplayAlerts = $false
 $excelWorkBook.Close($false,$null,$null)
 $excelApp.Quit()
+

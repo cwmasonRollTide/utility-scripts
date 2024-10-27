@@ -7,3 +7,4 @@ try {Import-Module $PSScriptRoot\..\..\ImportExcel.psd1} catch {throw ; return}
 PieChart -Title "Total PM by Company" `
     (Invoke-Sum (Get-Process|Where-Object company) company pm)
 
+

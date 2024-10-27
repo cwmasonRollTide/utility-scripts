@@ -19,3 +19,4 @@ function Get-StockInfo {
             $result.$name.quote
         }) | Export-Excel $xlfile -AutoNameRange -AutoSize -Show -ExcelChartDefinition $ecd -StartRow 21 -StartColumn 2
 }
+

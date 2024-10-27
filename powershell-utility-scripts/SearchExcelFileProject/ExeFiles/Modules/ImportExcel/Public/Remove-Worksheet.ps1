@@ -1,4 +1,4 @@
-﻿function Remove-Worksheet {
+function Remove-Worksheet {
     [CmdletBinding(SupportsShouldProcess=$true)]
     param(
         #    [Parameter(ValueFromPipelineByPropertyName)]

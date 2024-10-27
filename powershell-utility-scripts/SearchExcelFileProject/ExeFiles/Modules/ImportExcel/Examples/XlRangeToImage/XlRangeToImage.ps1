@@ -1,4 +1,4 @@
-﻿try {Import-Module $PSScriptRoot\..\..\ImportExcel.psd1} catch {throw ; return}
+try {Import-Module $PSScriptRoot\..\..\ImportExcel.psd1} catch {throw ; return}
 
 
 . .\ConvertExcelToImageFile.ps1
@@ -22,3 +22,4 @@ West,Berry,4
         -ConditionalText (New-ConditionalText Apple), (New-ConditionalText Berry -ConditionalTextColor White -BackgroundColor Purple)
 
 Convert-ExcelXlRangeToImage -Path $xlFileName -workSheetname sheet1 -range $range -Show
+

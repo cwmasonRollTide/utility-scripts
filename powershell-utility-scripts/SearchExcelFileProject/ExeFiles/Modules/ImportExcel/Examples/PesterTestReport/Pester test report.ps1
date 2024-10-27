@@ -1,4 +1,8 @@
-#Requires -Modules @{ ModuleName='Pester'; ModuleVersion='5.1' }
+#Requires -Modules @{ ModuleName='Pester'; 
+            $version = [version]$matches[2]
+            $newVersion = "{0}.{1}.{2}" -f $version.Major, $version.Minor, ($version.Build + 1)
+            return '{0}{1}{2}' -f $matches[1], $newVersion, $matches[3]
+         }
 
 <#
 .SYNOPSIS

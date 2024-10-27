@@ -1,4 +1,4 @@
-﻿function Import-Excel {
+function Import-Excel {
     [CmdLetBinding()]
     [Diagnostics.CodeAnalysis.SuppressMessageAttribute("PSAvoidUsingPlainTextForPassword", "")]
     [Diagnostics.CodeAnalysis.SuppressMessageAttribute('PSPossibleIncorrectUsageOfAssignmentOperator', '', Justification = 'Intentional')]
@@ -262,3 +262,4 @@
         }
     }
 }
+

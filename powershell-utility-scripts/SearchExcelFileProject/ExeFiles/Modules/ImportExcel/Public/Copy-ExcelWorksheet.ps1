@@ -1,4 +1,4 @@
-﻿function Copy-ExcelWorksheet {
+function Copy-ExcelWorksheet {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory = $true,ValueFromPipeline=$true)]

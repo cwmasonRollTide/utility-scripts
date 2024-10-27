@@ -1,4 +1,4 @@
-﻿function New-ExcelChartDefinition {
+function New-ExcelChartDefinition {
     [Alias("New-ExcelChart")] #This was the former name. The new name reflects that we are defining a chart, not making one in the workbook.
     [CmdletBinding()]
     [Diagnostics.CodeAnalysis.SuppressMessageAttribute('PSUseShouldProcessForStateChangingFunctions', '', Justification = 'Does not change system State')]
@@ -86,3 +86,4 @@
         YAxisPosition      = $YAxisPosition
     }
 }
+

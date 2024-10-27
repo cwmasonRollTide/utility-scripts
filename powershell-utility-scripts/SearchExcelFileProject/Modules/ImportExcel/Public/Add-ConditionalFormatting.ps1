@@ -1,4 +1,4 @@
-﻿function Add-ConditionalFormatting {
+function Add-ConditionalFormatting {
     param (
         [Parameter(Mandatory = $true, Position = 0)]
         [Alias("Range")]
