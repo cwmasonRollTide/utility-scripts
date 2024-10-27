@@ -5,3 +5,4 @@ try {Import-Module $PSScriptRoot\..\..\ImportExcel.psd1} catch {throw ; return}
 Test-APIReadXls $PSScriptRoot\testlist.xlsx | Foreach-Object {
     Invoke-Pester -Script $_.fullname  -PassThru -Show None
 }
+

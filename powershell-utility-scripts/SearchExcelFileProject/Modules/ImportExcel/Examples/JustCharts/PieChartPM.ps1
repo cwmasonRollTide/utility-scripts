@@ -8,3 +8,4 @@ PieChart -Title "Total PM by Company" `
     (Invoke-Sum (Get-Process|Where-Object company) company pm)
 
 
+

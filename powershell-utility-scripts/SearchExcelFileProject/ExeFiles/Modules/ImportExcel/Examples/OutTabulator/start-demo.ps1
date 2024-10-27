@@ -216,3 +216,4 @@ Write-Host -Fore $promptColor $(
    $dur.Hours, $dur.Minutes, $dur.Seconds, [DateTime]::Now.ToLongTimeString())
 Write-Host -Fore $promptColor $([DateTime]::now)
 Write-Host
+

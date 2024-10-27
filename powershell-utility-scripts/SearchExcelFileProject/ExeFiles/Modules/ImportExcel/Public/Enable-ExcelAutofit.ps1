@@ -14,3 +14,4 @@ function Enable-ExcelAutofit {
     $range = Get-ExcelSheetDimensionAddress $Worksheet
     $Worksheet.Cells[$range].AutoFitColumns()
 }
+

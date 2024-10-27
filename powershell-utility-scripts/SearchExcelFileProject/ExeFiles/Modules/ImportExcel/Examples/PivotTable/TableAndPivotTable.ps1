@@ -28,3 +28,4 @@ Add-PivotTable -Address $excel.Sheet1.Cells["F1"] -SourceWorkSheet $Excel.Sheet1
                         LegendPosition="Bottom"}
 #Save and open in excel
 Close-ExcelPackage $excel -Show
+

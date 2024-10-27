@@ -106,3 +106,4 @@ function ColumnChart {
             -NoLegend:$NoLegend -ShowCategory:$ShowCategory -ShowPercent:$ShowPercent
     }
 }
+

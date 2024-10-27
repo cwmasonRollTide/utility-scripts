@@ -8,3 +8,4 @@ if ($PSVersionTable.PSVersion.Major -gt 5 -and -not (Get-Command Format-Markdown
 }
 
 Import-Excel $Path | Format-Markdown 
+

@@ -12,3 +12,4 @@ id,item,units,cost
 "@ | ConvertFrom-Csv |
     Add-Member -PassThru -MemberType NoteProperty -Name Total -Value "=units*cost" |
     Export-Excel -Path .\testFormula.xlsx -Show -AutoSize -AutoNameRange
+

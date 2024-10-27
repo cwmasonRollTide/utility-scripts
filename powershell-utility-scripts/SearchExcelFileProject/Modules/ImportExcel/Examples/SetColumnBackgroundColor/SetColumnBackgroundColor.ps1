@@ -11,3 +11,4 @@ $totalRows = $ws.Dimension.Rows
 Set-ExcelRange -Range $ws.Cells["B2:B$($totalRows)"] -BackgroundColor LightBlue
 
 Export-Excel -ExcelPackage $p -show -AutoSize
+

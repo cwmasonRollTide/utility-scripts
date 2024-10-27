@@ -21,3 +21,4 @@ $excel = $data | Export-Excel .\custom.xlsx -PassThru
 Set-ExcelRange -Worksheet $excel.Sheet1 -Range "A:A" -NumberFormat '[>999999]#,,"M";#,"K"'
 
 Close-ExcelPackage $excel -Show
+

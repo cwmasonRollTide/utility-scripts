@@ -54,3 +54,4 @@ New-CellData -Range D4 -Value "Monthly Rate"
 New-CellData -Range F4 -Value "=((1+B4)^(1/12))-1" -Format 'Percentage'
 
 Close-ExcelPackage $pkg -Show
+

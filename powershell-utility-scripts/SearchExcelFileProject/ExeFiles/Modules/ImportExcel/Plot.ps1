@@ -216,3 +216,4 @@ class PSPlot {
         Invoke-Item $this.path
     }
 }
+

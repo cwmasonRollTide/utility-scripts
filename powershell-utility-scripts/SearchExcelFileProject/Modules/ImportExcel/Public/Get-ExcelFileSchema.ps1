@@ -45,3 +45,4 @@ function Get-ExcelFileSchema {
         $result | ConvertTo-Json -Compress:$Compress
     }
 }
+

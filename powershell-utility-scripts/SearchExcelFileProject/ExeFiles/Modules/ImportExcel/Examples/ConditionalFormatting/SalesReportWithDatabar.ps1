@@ -23,3 +23,4 @@ Set-ExcelRange -Address $sheet.Cells["A8"] -Value "Total"
 Set-ExcelRange -Address $sheet.Cells["B8"] -Formula "=Sum(Sales)"
 
 Close-ExcelPackage $excel -Show
+

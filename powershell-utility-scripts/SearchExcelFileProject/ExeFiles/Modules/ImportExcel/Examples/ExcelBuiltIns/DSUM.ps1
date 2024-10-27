@@ -32,3 +32,4 @@ Set-Format -Worksheet $xl.Sheet1 -Range E4 -Value Sales
 Set-Format -Worksheet $xl.Sheet1 -Range F4 -Formula ('=DSUM({0},"Sales",E1:G2)' -f $databaseAddress) -NumberFormat '$##0'
 
 Close-ExcelPackage $xl -Show
+

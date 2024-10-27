@@ -30,3 +30,4 @@ function Update-FirstObjectProperties {
     }
     end     {   $Union   }
 }
+

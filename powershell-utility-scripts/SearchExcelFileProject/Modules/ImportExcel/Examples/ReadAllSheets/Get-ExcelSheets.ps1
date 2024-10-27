@@ -17,3 +17,4 @@ foreach ($sheet in $e.workbook.worksheets) {
 Close-ExcelPackage $e -NoSave
 
 $hash
+

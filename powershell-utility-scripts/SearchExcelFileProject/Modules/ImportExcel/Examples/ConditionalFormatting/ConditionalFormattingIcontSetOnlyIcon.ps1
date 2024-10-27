@@ -20,3 +20,4 @@ $cfi1 = New-ConditionalFormattingIconSet -Range C:C -ConditionalFormat ThreeIcon
 $cfi2 = New-ConditionalFormattingIconSet -Range F:F -ConditionalFormat ThreeIconSet -IconType Symbols2 -ShowIconOnly
 
 $data | Export-Excel $xlfile -AutoSize -ConditionalFormat $cfi1, $cfi2 -Show
+

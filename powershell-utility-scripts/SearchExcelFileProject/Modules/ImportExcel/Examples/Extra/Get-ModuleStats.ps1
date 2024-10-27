@@ -20,3 +20,4 @@ $download = Get-HtmlTable "https://www.powershellgallery.com/packages/$moduleNam
 
 & "$($chartType)Chart"  $download "Download stats for $moduleName" -nolegend:($chartype -ne 'pie')
 
+

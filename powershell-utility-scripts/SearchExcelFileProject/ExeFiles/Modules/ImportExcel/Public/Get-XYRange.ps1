@@ -25,3 +25,4 @@ function Get-XYRange {
         YRange = $infer | Where-Object -FilterScript {$_.datatype -match 'int|double'} | Select-Object -First 1 -Property excelcolumn, name
     }
 }
+

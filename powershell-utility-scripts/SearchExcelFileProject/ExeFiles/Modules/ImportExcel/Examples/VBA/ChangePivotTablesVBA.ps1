@@ -60,3 +60,4 @@ Add-PivotTable -PivotTableName "SalesPivot" -Address $ExcelPackage.Sales.Cells["
     -SourceRange $ExcelPackage.Sales.Tables[0].Address -PivotRows "Region", "Item" -PivotData @{ "TotalSold" = "Sum" }
 
 Close-ExcelPackage -ExcelPackage $ExcelPackage -Show
+

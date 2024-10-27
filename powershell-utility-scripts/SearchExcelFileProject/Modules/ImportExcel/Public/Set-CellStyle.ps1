@@ -15,3 +15,4 @@ function Set-CellStyle {
     $t.Style.Fill.PatternType=$Pattern
     $t.Style.Fill.BackgroundColor.SetColor($Color)
 }
+

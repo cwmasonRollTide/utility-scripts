@@ -26,3 +26,4 @@ function Export-StocksToExcel {
 }
 
 # Export-StocksToExcel -symbols 'ibm,aapl,msft' -measure High
+

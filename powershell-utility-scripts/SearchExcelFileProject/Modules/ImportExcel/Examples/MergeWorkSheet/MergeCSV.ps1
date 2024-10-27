@@ -18,3 +18,4 @@ c,d,21
 "@ | ConvertFrom-Csv
 
 Merge-Worksheet -OutputFile $xlSourcefile -ReferenceObject $leftCsv -DifferenceObject $rightCsv -Key Length -Show
+

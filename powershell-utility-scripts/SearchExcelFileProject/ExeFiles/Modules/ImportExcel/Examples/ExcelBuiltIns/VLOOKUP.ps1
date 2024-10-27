@@ -21,3 +21,4 @@ $rows = $xl.Sheet1.Dimension.Rows
 Set-ExcelRange -Worksheet $xl.Sheet1 -Range E2 -Formula "=VLookup(D2,A2:B$($rows),2,FALSE)"
 
 Close-ExcelPackage $xl -Show
+

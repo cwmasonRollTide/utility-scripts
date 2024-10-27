@@ -97,3 +97,4 @@ Negative - Blue
 Set-ExcelRange -Worksheet $excel.SEKRates -Range S17 -Value $v -WrapText -Width 20 -HorizontalAlignment Center -VerticalAlignment Center
 
 Close-ExcelPackage $excel -Show
+

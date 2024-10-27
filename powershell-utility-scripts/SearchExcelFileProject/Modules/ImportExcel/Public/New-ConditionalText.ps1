@@ -40,3 +40,4 @@ function New-ConditionalText {
     $obj.pstypenames.Add("ConditionalText")
     $obj
 }
+

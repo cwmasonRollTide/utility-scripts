@@ -13,3 +13,4 @@ foreach ($query in $queries) {
   Invoke-ExcelQuery .\testOleDb.xlsx $query | Format-Table  
 }
 
+

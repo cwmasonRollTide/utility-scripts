@@ -21,3 +21,4 @@ North,apple,2
 $reportTitle = "This is a report Title"
 $style = New-ExcelStyle -BackgroundColor LightBlue -FontSize 14 -Bold -Range "A1:H1" -HorizontalAlignment Center -Merge
 $data | Export-Excel $xlfile -Show -AutoSize -AutoFilter -Title $reportTitle -Style $style
+

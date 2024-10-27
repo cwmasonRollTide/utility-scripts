@@ -14,3 +14,4 @@ $data = $(
 #Set the numbers throughout the sheet to format as positive in blue with a + sign, negative in Red with a - sign.
 $data | Export-Excel -Path $file -Show -AutoSize -NumberFormat "[Blue]+0.#0;[Red]-0.#0"
 
+

@@ -24,3 +24,4 @@ $ptd += New-PivotTableDefinition @base starttype -PivotRows starttype -ChartType
 $ptd += New-PivotTableDefinition @base canstop -PivotRows canstop -ChartType ConeColStacked
 
 Get-Service | Export-Excel -path $file -WorkSheetname gsv -Show -PivotTableDefinition $ptd
+

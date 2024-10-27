@@ -19,3 +19,4 @@ function Get-ConditionalFormatting {
 
 $xlSourcefile = "$PSScriptRoot\GetConditionalFormatting.xlsx"
 Get-ConditionalFormatting -xlSourcefile $xlSourcefile
+

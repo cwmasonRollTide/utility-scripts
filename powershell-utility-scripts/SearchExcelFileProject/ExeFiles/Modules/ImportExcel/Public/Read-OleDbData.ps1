@@ -52,3 +52,4 @@ function Read-OleDbData {
     $null = $DataAdapter.Dispose()
     $DataTable.Rows | Select-Object $DataTable.Columns.ColumnName
 }
+

@@ -12,3 +12,4 @@ ConvertFrom-ExcelData .\testSQLGen.xlsx {
     $reportRecord +=""
     $reportRecord -join "`r`n"
 }
+

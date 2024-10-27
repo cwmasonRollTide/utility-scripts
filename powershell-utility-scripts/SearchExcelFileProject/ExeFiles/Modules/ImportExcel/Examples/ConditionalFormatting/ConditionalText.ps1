@@ -13,3 +13,4 @@ Get-Service |
         New-ConditionalText -ConditionalType EndsWith svc wheat green             #the rule here is 'Ends with' and the value is 'svc' the forground is wheat and the background dark green
         New-ConditionalText -ConditionalType BeginsWith windows darkgreen wheat   #this is 'Begins with "Windows"' the forground is dark green and the background wheat
     )
+

@@ -26,3 +26,4 @@ $sheet = $excel.Workbook.Worksheets["Sheet1"]
 Add-ConditionalFormatting -Worksheet $sheet -Range "B1:D14" -DataBarColor CornflowerBlue
 
 Close-ExcelPackage $excel -Show
+

@@ -23,3 +23,4 @@ South,avocado,73
 $cd = New-ExcelChartDefinition -XRange Region -YRange TotalSold -ChartType ColumnClustered -ChartTrendLine Linear
 $data | Export-Excel $xlSourcefile -ExcelChartDefinition $cd -AutoNameRange -Show
 
+

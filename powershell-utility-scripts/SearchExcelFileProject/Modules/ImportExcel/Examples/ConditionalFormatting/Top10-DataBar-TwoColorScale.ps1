@@ -35,3 +35,4 @@ Add-ConditionalFormatting -Worksheet $xl.StoresSalesDataBar -Address $xl.StoresS
 Add-ConditionalFormatting -Worksheet $xl.StoresSalesTwoColorScale -Address $xl.StoresSalesDataBar.dimension.address -RuleType TwoColorScale
 
 Close-ExcelPackage $xl -Show
+

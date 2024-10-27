@@ -21,3 +21,4 @@ $s | Export-Excel -Path $env:temp\server2.xlsx
 
 #This use of Merge-worksheet Assumes a default worksheet name, (sheet1)  We will check and output Name (the key), DisplayName and StartType and ignore other properties.
 Merge-Worksheet -Referencefile "$env:temp\server1.xlsx" -Differencefile  "$env:temp\Server2.xlsx" -OutputFile  "$env:temp\combined1.xlsx"  -Property name,displayname,startType -Key name -Show
+

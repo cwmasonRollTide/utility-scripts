@@ -156,3 +156,4 @@ function Add-ConditionalFormatting {
     #Allow further tweaking by returning the rule, if passthru specified
     if     ($Passthru)  {$rule}
 }
+

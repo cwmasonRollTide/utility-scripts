@@ -146,3 +146,4 @@ Add-ConditionalFormatting -WorkSheet $ws -range "L2:L$endrow" -RuleType Contains
 Add-ConditionalFormatting -WorkSheet $ws -range "L2:L$endRow" -RuleType ContainsText -ConditionValue "Success" -BackgroundPattern None -ForeGroundColor Green
 Close-ExcelPackage -ExcelPackage $excel  -Show:$show
 
+

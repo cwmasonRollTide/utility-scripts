@@ -20,3 +20,4 @@ $c3 = New-ExcelChartDefinition -YRange "Quantity"-XRange "Product" -Title "Sales
 
 $data | ConvertFrom-Csv |
     Export-Excel -Path  $xlSourcefile -AutoFilter -AutoNameRange -AutoSize -ExcelChartDefinition $c1,$c2,$c3  -Show
+

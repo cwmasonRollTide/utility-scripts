@@ -57,3 +57,4 @@ function New-ConditionalFormattingIconSet {
         $obj
     }
 }
+

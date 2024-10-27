@@ -19,3 +19,4 @@ Remove-Item $xlSourcefile -ErrorAction Ignore
 
 #use the conditional format definition created above
 $data | Export-Excel $xlSourcefile -show -ConditionalText $ContainsBlanks
+

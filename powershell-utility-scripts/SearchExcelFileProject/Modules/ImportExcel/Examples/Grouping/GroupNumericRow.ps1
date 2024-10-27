@@ -11,3 +11,4 @@ $PivotTableDefinition = New-PivotTableDefinition -Activate -PivotTableName Place
 Import-Csv "$PSScriptRoot\First10Races.csv" |
     Select-Object  Race, @{n = "Date"; e = {[datetime]::ParseExact($_.date, "dd/MM/yyyy", (Get-Culture))}}, FinishPosition, Driver, GridPosition, Team, Points |
     Export-Excel $xlSourcefile -Show -AutoSize -PivotTableDefinition $PivotTableDefinition
+

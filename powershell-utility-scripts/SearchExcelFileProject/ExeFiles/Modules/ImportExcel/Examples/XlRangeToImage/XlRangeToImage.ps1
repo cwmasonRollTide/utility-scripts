@@ -23,3 +23,4 @@ West,Berry,4
 
 Convert-ExcelXlRangeToImage -Path $xlFileName -workSheetname sheet1 -range $range -Show
 
+

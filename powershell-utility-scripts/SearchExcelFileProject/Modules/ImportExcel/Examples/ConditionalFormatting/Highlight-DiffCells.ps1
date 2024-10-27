@@ -24,3 +24,4 @@ Add-ConditionalFormatting -Worksheet $excel.sheet1 -Range "C2:D10" -ConditionVal
 Add-ConditionalFormatting -Worksheet $excel.sheet1 -Range "A2:D10" -ConditionValue '=$C2=$D2' -RuleType Expression -BackgroundColor ([System.Drawing.Color]::LavenderBlush)
 
 Close-ExcelPackage $excel -Show
+

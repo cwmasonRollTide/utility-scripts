@@ -14,3 +14,4 @@ function Enable-ExcelAutoFilter {
     $range = Get-ExcelSheetDimensionAddress $Worksheet    
     $Worksheet.Cells[$range].AutoFilter = $true
 }
+

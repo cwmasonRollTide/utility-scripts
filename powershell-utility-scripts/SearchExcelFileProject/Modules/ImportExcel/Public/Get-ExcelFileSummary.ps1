@@ -27,3 +27,4 @@ function Get-ExcelFileSummary {
         Close-ExcelPackage -ExcelPackage $excel -NoSave
     }
 }
+

@@ -141,3 +141,4 @@ function Add-ExcelChart {
     catch { Write-Warning -Message "Failed adding Chart to worksheet '$($Worksheet).name': $_" }
 }
 
+

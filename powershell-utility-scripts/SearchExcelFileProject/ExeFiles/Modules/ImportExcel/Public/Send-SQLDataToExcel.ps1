@@ -110,3 +110,4 @@ function Send-SQLDataToExcel {
         if     ($Connection)  {$Session.close() }
     }
 }
+

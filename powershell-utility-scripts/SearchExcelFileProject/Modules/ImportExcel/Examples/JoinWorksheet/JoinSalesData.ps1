@@ -22,3 +22,4 @@ Import-Csv $PSScriptRoot\WestSales.csv  | Export-Excel -WorkSheetname West  @par
 $params.Remove("AutoNameRange")
 $params.Remove("ExcelChartDefinition")
 Join-Worksheet -WorkSheetName AllSales -Show @params
+

@@ -19,3 +19,4 @@ $(
         New-ConditionalText -Range Start -ConditionalType Yesterday -ConditionalTextColor Red
         New-ConditionalText -Range End   -ConditionalType Yesterday -BackgroundColor Blue -ConditionalTextColor Red
     )
+
