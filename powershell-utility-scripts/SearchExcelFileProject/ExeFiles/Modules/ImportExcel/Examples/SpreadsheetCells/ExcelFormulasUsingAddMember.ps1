@@ -13,3 +13,4 @@ id,item,units,cost
     Add-Member -PassThru -MemberType NoteProperty -Name Total -Value "=units*cost" |
     Export-Excel -Path .\testFormula.xlsx -Show -AutoSize -AutoNameRange
 
+

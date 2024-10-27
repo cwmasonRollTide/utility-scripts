@@ -20,3 +20,4 @@ $pivotdef = New-PivotTableDefinition -PivotTableName 'Summary' -PivotRows by -Pi
                                      Downloads="Sum"} -PivotDataToColumn -Activate -ChartType ColumnClustered -PivotNumberFormat '#,###'
 $top1000 | export-excel -path '~\Documents\gallery.xlsx' -Numberformat '#,###' -PivotTableDefinition $pivotdef -TableName 'TopDownloads' -Show
 
+

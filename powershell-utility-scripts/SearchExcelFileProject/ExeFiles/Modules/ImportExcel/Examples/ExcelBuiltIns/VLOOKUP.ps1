@@ -22,3 +22,4 @@ Set-ExcelRange -Worksheet $xl.Sheet1 -Range E2 -Formula "=VLookup(D2,A2:B$($rows
 
 Close-ExcelPackage $xl -Show
 
+
