@@ -33,7 +33,7 @@ Copyright = '(c) 2024 Connor. All rights reserved.'
 Description = 'This module provides a function to compare two strings.'
 
 # Minimum version of the Windows PowerShell engine required by this module
-# PowerShellVersion = ''
+PowerShellVersion = '7.4'
 
 # Name of the Windows PowerShell host required by this module
 # PowerShellHostName = ''
@@ -118,10 +118,3 @@ PrivateData = @{
 
 # Default prefix for commands exported from this module. Override the default prefix using Import-Module -Prefix.
 # DefaultCommandPrefix = ''
-
-}
-
-
-
-
-
