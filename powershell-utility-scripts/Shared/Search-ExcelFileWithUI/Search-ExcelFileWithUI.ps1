@@ -1,11 +1,11 @@
 Import-Module ImportExcel
 Add-Type -AssemblyName System.Windows.Forms
 
-. "$PSScriptRoot/../Shared/Save-File.ps1"
-. "$PSScriptRoot/../Shared/Open-File.ps1"
-. "$PSScriptRoot/../Shared/Compare-Strings.ps1"
-. "$PSScriptRoot/../Shared/Get-LargeTextInput.ps1"
-. "$PSScriptRoot/../Shared/Search-ExcelContent.ps1"
+. "$PSScriptRoot/../Shared/Save-File/Save-File.ps1"
+. "$PSScriptRoot/../Shared/Open-File/Open-File.ps1"
+. "$PSScriptRoot/../Shared/Compare-Strings/Compare-Strings.ps1"
+. "$PSScriptRoot/../Shared/Get-LargeTextInput/Get-LargeTextInput.ps1"
+. "$PSScriptRoot/../Shared/Search-ExcelContent/Search-ExcelContent.ps1"
 
 function Search-ExcelFileWithUI {
     <#
@@ -31,7 +31,6 @@ function Search-ExcelFileWithUI {
     Param()
 
     $initialDirectory = Get-StartLocation
-
     $selectedFile = Open-File `
         -Title "Select the Input Excel File" `
         -InitialDirectory $initialDirectory `
@@ -50,7 +49,6 @@ function Search-ExcelFileWithUI {
         -errorMessage "Invalid input. Please enter a valid column name."
 
     $tolerance = Get-ToleranceInput
-
     $returnWholeRow = Get-YesNoInput-Bool `
         -Prompt "Do you want to return the whole row of data when we find matches within the tolerance you set?"
     
@@ -65,7 +63,6 @@ function Search-ExcelFileWithUI {
 
         $resultCount = $matchingStringsResults.Count
         Write-Host "Found $resultCount matching results."
-
         if ($resultCount -gt 0) {
             $saveResults = Get-YesNoInput-Bool -Prompt "Do you want to save the results?"
             if ($saveResults) {
@@ -83,7 +80,6 @@ function Search-ExcelFileWithUI {
     catch {
         Write-Error "An error occurred while searching the file: $_"#_catches the error message and displays it
     }
-
     [System.Windows.Forms.MessageBox]::Show("Search completed. Press OK to exit.", "Search Complete", [System.Windows.Forms.MessageBoxButtons]::OK, [System.Windows.Forms.MessageBoxIcon]::Information)
 }
 

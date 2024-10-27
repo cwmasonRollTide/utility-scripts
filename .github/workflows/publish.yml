@@ -19,4 +19,5 @@ jobs:
       - name: Publish Modules
         env:
           NUGET_KEY: ${{ secrets.NUGET_KEY }}  
-        run: powershell-utility-scripts/Shared/publish.ps1 
+        run: |
+          powershell-utility-scripts/Shared/publish.ps1 
