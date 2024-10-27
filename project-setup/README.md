@@ -30,12 +30,23 @@ These scripts are intended to automate the initial setup process for various typ
     cd project-setup-scripts
     ```
 
-3. **Run whichever setup script you want - named after main features**:
-    - Comments at the top of the file should further explain the options present in the script for project configuration
+3. **Run a Project Setup Script**
+
+    ```powershell
+    .\scripts\react-dotnet-storage-azure.ps1
+    ```
+
+    - Replace `setup-dotnet-react-storage-azure.sh` with the script that matches your project requirements.
+
+## Available Scripts
+
+Here are the current scripts:
+
+- `react-dotnet-storage-azure.ps1`: Sets up a .NET project with React and Azure Storage.
 
 ## Contributing
 
-I welcome contributions! Help me out, make a PR. If you break a script, though? Straight to jail
+I welcome contributions! Help me out, make a PR. If you break a script, though? Straight to jail. Hundred lashes with a wet noodle. Bill Murray will give you a disappointed look
 
 ## License
 
