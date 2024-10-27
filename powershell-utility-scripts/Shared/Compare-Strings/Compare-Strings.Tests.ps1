@@ -5,14 +5,14 @@ Describe 'Compare-Strings' {
     Context 'Comparing two identical strings' {
         It 'Should return true' {
             $result = Compare-Strings 'Hello' 'Hello'
-            $result | Should -Be $true   # Should be $true for boolean comparison
+            $result | Should -Be $true 
         }
     }
 
     Context 'Comparing two different strings' {
         It 'Should return false' {
             $result = Compare-Strings 'Hello' 'World'
-            $result | Should -Be $false  # Should be $false for boolean comparison
+            $result | Should -Be $false
         }
     }
 
@@ -26,7 +26,7 @@ Describe 'Compare-Strings' {
     Context 'Comparing empty strings' {
         It 'Should return true' {
             $result = Compare-Strings '' ''
-            $result | Should -Be $true  # Empty strings should be considered equal
+            $result | Should -Be $true
         }
     }
 }
