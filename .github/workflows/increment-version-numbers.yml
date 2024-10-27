@@ -1,0 +1,28 @@
+# name: PowerShell Modules CI/CD
+
+# on:
+#   push:
+#     branches:
+#       - main
+#   pull_request:
+#     branches:
+#       - main
+#       - feature/*
+#       - hotfix/*
+#       - release/*
+#       - bugfix/*
+#       - story/*
+
+# jobs:
+#   increment:
+#     runs-on: windows-latest
+#     steps:
+#       - name: Checkout code
+#         uses: actions/checkout@v2
+          
+#       - name: Install PowerShellGet
+#         run: |
+#           Install-Module -Name PowerShellGet -Force -AllowClobber
+
+#       - name: Build Manifests
+#         run: powershell-utility-scripts/Shared/increment-versions.ps1
