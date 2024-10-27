@@ -6,3 +6,4 @@ ConvertFrom-ExcelToSQLInsert -TableName "Movies" -Path ".\Movies.xlsx" -ConvertE
 ConvertFrom-ExcelToSQLInsert -UseMSSQLSyntax -TableName "Movies" -Path ".\Movies.xlsx" -ConvertEmptyStringsToNull
 
 
+

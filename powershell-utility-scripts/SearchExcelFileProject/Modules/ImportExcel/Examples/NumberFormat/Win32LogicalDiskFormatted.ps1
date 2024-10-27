@@ -9,3 +9,4 @@ Get-CimInstance win32_logicaldisk -filter "drivetype=3" |
     Export-Excel -Path $file -Show -AutoSize
 
 
+

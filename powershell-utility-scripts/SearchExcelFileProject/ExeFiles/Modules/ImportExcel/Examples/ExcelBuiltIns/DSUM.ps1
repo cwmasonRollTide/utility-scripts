@@ -34,3 +34,4 @@ Set-Format -Worksheet $xl.Sheet1 -Range F4 -Formula ('=DSUM({0},"Sales",E1:G2)' 
 Close-ExcelPackage $xl -Show
 
 
+
