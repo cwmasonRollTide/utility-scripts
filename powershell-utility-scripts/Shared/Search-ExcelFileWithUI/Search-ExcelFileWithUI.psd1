@@ -1,4 +1,4 @@
-function Open-File {
+function Search-ExcelFileWithUI {
     param (
         [string]$FilePath
     )

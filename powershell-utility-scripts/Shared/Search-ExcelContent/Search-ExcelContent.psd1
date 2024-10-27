@@ -1,4 +1,4 @@
-function Open-File {
+function Seard-ExcelContent {
     param (
         [string]$FilePath
     )

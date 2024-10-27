@@ -1,4 +1,4 @@
-function Open-File {
+function Get-LargeTextInput {
     param (
         [string]$FilePath
     )

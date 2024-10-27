@@ -1,4 +1,4 @@
-function Open-File {
+function Save-File {
     param (
         [string]$FilePath
     )

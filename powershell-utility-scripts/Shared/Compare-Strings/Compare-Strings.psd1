@@ -1,4 +1,4 @@
-function Open-File {
+function Compare-Strings {
     param (
         [string]$FilePath
     )
