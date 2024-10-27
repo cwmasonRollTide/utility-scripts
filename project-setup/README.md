@@ -36,13 +36,21 @@ These scripts are intended to automate the initial setup process for various typ
     .\scripts\react-dotnet-storage-azure.ps1
     ```
 
-    - Replace `setup-dotnet-react-storage-azure.sh` with the script that matches your project requirements.
+    - Replace `setup-dotnet-react-storage-azure.ps1` with the script that matches your project requirements.
 
 ## Available Scripts
 
-Here are the current scripts:
+Here are the currently available scripts:
 
-- `react-dotnet-storage-azure.ps1`: Sets up a .NET project with React and Azure Storage.
+- [`dotnet-api.cmd`](./scripts/dotnet-api.cmd) Sets up a simple .NET console app
+
+- [`dotnet-react.cmd`](./scripts/dotnet-react.cmd) Sets up a React project with a .NET backend.
+
+- [`react-dotnet-storage-azure.ps1`:](./scripts/react-dotnet-storage-azure.ps1) Sets up a .NET project with React and Azure Storage.
+
+- [`dotnet-react-storage.cmd`](./scripts/dotnet-react-storage.cmd) Sets up a .NET project with React and storage (relational/nonrelational).
+
+- [`dotnet-react-storage-aws.cmd`](./scripts/dotnet-react-storage-aws.cmd) Sets up a .NET project with React and storage (relational/nonrelational) on AWS.
 
 ## Contributing
 
