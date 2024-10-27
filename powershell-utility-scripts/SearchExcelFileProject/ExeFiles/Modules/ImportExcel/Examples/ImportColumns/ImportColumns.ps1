@@ -9,3 +9,4 @@ Import-Excel -Path $xlFile -ImportColumns @(1,3,2) -NoHeader -StartRow 1
 Import-Excel -Path $xlFile -ImportColumns @(6,7,12,25,46) | Format-Table -AutoSize
 
 
+

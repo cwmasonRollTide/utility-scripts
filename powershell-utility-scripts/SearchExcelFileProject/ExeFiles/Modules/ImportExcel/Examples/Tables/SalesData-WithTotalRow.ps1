@@ -29,3 +29,4 @@ $TableTotalSettings = @{
 $data | Export-Excel -Path $xlfile -TableName Sales -TableStyle Medium10 -TableTotalSettings $TableTotalSettings -AutoSize -Show
 
 
+

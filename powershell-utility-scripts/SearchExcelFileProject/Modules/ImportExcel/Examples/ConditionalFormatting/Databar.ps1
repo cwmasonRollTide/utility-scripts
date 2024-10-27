@@ -34,3 +34,4 @@ foreach ($c in 5..9) {Set-ExcelRange -Address $sheet.Column($c)  -AutoFit }
 Export-Excel -ExcelPackage $excel -WorkSheetname "Processes" -IncludePivotChart -ChartType ColumnClustered -NoLegend -PivotRows company  -PivotData @{'Name'='Count'}  -Show
 
 
+
