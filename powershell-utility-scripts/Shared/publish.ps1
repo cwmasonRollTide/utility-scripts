@@ -11,6 +11,7 @@ foreach ($module in $modules) {
     Publish-Module `
         -Path "$scriptDir/$module" `
         -NuGetApiKey $env:NUGET_KEY 
+        -Force
 }
 
 
