@@ -29,13 +29,4 @@ Describe 'Compare-Strings' {
             $result | Should -Be $true  # Empty strings should be considered equal
         }
     }
-<<<<<<< HEAD
 }
-=======
-}
-
-
-
->>>>>>> 3ca2d7a2a5152cb9a8fbe288bc0dbabb6be5c47c
-
-
