@@ -4,6 +4,14 @@ on:
   push:
     branches:
       - main
+  pull_request:
+    branches:
+      - main
+      - feature/*
+      - hotfix/*
+      - release/*
+      - bugfix/*
+      - story/*
 
 jobs:
   publish:
@@ -17,7 +25,4 @@ jobs:
           Install-Module -Name PowerShellGet -Force -AllowClobber
 
       - name: Publish Modules
-        env:
-          NUGET_KEY: ${{ secrets.NUGET_KEY }}  
-        run: |
-          powershell-utility-scripts/Shared/rebuild-manifest.ps1
+        run: powershell-utility-scripts/Shared/rebuild-manifest.ps1
