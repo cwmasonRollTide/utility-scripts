@@ -115,21 +115,16 @@ function Get-LargeTextInput {
         [string]$validationPattern = '^\S+$',
         [string]$errorMessage = "Invalid input. Please enter a non-empty value without whitespace."
     )
-
     $form = New-CustomForm -title $title
     $panel = New-CustomPanel -form $form
-
     $form.Label = New-CustomLabel -parent $panel -text $prompt -x 20 -y 20 -width 425 -height 40
     $textBox = New-CustomTextBox -parent $panel -defaultValue $defaultValue -x 20 -y 70 -width 425 -height 30
     $errorLabel = New-CustomLabel -parent $panel -text "" -x 20 -y 110 -width 425 -height 30 -fontSize 10 -foreColor [System.Drawing.Color]::Red
-
     $okButton = New-CustomButton -parent $panel -text "OK" -x 295 -y 150 -dialogResult ([System.Windows.Forms.DialogResult]::OK) -backColor ([System.Drawing.Color]::FromArgb(0,120,215)) -foreColor ([System.Drawing.Color]::White)
     $cancelButton = New-CustomButton -parent $panel -text "Cancel" -x 380 -y 150 -dialogResult ([System.Windows.Forms.DialogResult]::Cancel) -backColor ([System.Drawing.Color]::White) -foreColor ([System.Drawing.Color]::Black)
-
     $form.AcceptButton = $okButton
     $form.CancelButton = $cancelButton
     $form.Add_Shown({$textBox.Select()})
-
     do {
         $result = $form.ShowDialog()
         if ($result -eq [System.Windows.Forms.DialogResult]::OK) {

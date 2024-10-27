@@ -12,7 +12,7 @@
 RootModule = 'Compare-Strings.psm1'
 
 # Version number of this module.
-ModuleVersion = '1.0.3'       
+ModuleVersion = '1.0.4'
 
 # Supported PSEditions
 # CompatiblePSEditions = @()
@@ -118,3 +118,6 @@ PrivateData = @{
 
 # Default prefix for commands exported from this module. Override the default prefix using Import-Module -Prefix.
 # DefaultCommandPrefix = ''
+}
+
+# End of module manifest
