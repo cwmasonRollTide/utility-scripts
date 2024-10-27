@@ -1,4 +1,4 @@
-name: PowerShell Modules CI/CD
+name: Publish Modules CI/CD
 
 on:
   push:
@@ -14,21 +14,8 @@ on:
       - story/*
 
 jobs:
-  build-manifests:
-    runs-on: windows-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-          
-      - name: Install PowerShellGet
-        run: |
-          Install-Module -Name PowerShellGet -Force -AllowClobber
-
-      - name: Build Manifests
-        run: powershell-utility-scripts/Shared/rebuild-manifest.ps1
 
   publish:
-    needs: build-manifests
     runs-on: windows-latest
     steps:
       - name: Checkout code
