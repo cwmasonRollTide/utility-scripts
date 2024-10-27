@@ -5,3 +5,4 @@ Get-StockInfo -symbols "msft,ibm,ge,xom,aapl" -dataPlot avgTotalVolume
 
 
 
+

@@ -60,3 +60,4 @@ Convert-ExcelRangeToImage -Path $Path -WorksheetName $worksheetName -range $rang
 
 
 
+

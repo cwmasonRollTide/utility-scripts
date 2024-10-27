@@ -32,3 +32,4 @@ plot -f {[math]::Tan($args[0])} -minx (pi) -maxx (3*(pi)/2-.01)
 
 
 
+
