@@ -13,8 +13,13 @@ Get-ChildItem -Path $baseDir -Include *.ps1 -Recurse | ForEach-Object {
             $newVersion = "{0}.{1}.{2}" -f $version.Major, $version.Minor, ($version.Build + 1)
             return '{0}{1}{2}' -f $matches[1], $newVersion, $matches[3]
         }
-
+        
         Set-Content $filePath $updatedContent
+        # Stage the updated file
+        git add $filePath
+
+        # Commit the change
+        git commit -m "Incremented ModuleVersion in $filePath"
         Write-Host "Incremented ModuleVersion in $filePath"
     }
 }
