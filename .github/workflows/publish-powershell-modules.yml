@@ -22,10 +22,9 @@ jobs:
         uses: actions/checkout@v2
           
       - name: Install PowerShellGet
-        run: |
-          Install-Module -Name PowerShellGet -Force -AllowClobber
+        run: Install-Module -Name PowerShellGet -Force -AllowClobber
 
       - name: Publish Modules
         env:
-          NUGET_KEY: ${{ secrets.NUGET_KEY }}  
+          NUGET_KEY: ${{ secrets.NUGET_KEY }}
         run: powershell-utility-scripts/Shared/publish.ps1
