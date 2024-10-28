@@ -22,7 +22,7 @@ GUID = '22f7583b-ba39-402f-a1d2-d5a76015ad2d'
 # Author of this module
 Author = 'Connor Mason'
 
-ModuleVersion = '1.0.5'
+ModuleVersion = '1.0.6'
 
 # Company or vendor of this module
 CompanyName = 'Five M'

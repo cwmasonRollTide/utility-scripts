@@ -35,7 +35,7 @@ Description = 'This module provides a function to save a file.'
 # Minimum version of the Windows PowerShell engine required by this module
 PowerShellVersion = '7.4'
 
-ModuleVersion = '1.0.5'
+ModuleVersion = '1.0.6'
 
 
 # Name of the Windows PowerShell host required by this module
