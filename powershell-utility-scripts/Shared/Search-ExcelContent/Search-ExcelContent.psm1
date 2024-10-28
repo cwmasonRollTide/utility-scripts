@@ -1,6 +1,6 @@
 @{
     RootModule = 'Search-ExcelContent.psm1'
-    ModuleVersion = '1.0.4'
+    ModuleVersion = '1.0.5'
     Author = 'Connor Mason'
     Description = 'PowerShell module to search excel files given a search value and tolerance level'
 }
