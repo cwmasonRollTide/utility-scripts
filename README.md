@@ -31,6 +31,14 @@ Here are some of the key scripts available in this repository:
 
 - [Search-ExcelFileWithUI](./powershell-utility-scripts/Shared/Search-ExcelFileWithUI/Search-ExcelFileWithUI.ps1)
 
+*To install one of the above scripts, open a powershell terminal locally and run the command:
+
+```powershell
+Install-Module -Name Compare-Strings
+```
+
+*Or whichever function you need to use. But if you're using this and you didn't know that... pause and read something else first
+
 ## 🤝 Contributing
 
 I welcome contributions to this repository! If you have a utility script or project skeleton you'd like to add, please submit a pull request. Be sure to include a clear README explaining the purpose and usage of your addition.

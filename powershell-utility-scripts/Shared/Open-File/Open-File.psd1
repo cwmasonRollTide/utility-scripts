@@ -23,7 +23,7 @@ GUID = '5ba86eae-773a-440e-b7fb-8669891ad5f0'
 # Description of the functionality provided by this module
 Description = 'This module provides a function to open a file using the default application.'
 
-ModuleVersion = '1.0.6'
+ModuleVersion = '1.0.7'
 
 # Author of this module
 Author = 'Connor Mason'
