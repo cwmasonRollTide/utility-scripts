@@ -1,5 +1,9 @@
 # 🚀 Utility Scripts & Project Skeletons
 
+## 📦 Dependencies
+
+- [Powershell 7](https://github.com/PowerShell/PowerShell/releases/tag/v7.4.6)
+
 Welcome to my collection of utility scripts and project starter templates! This repository serves two main purposes:
 
 1. 🛠️ **Utility Scripts**: Finished, polished scripts that are helpful for my own work or for others in their day-to-day tasks. These cover a range of topics and technologies.
@@ -31,13 +35,11 @@ Here are some of the key scripts available in this repository:
 
 - [Search-ExcelFileWithUI](./powershell-utility-scripts/Shared/Search-ExcelFileWithUI/Search-ExcelFileWithUI.ps1)
 
-*To install one of the above scripts, open a powershell terminal locally and run the command:
+**To install one of the above scripts, open a powershell terminal locally and run a command like:**
 
 ```powershell
 Install-Module -Name Compare-Strings
 ```
-
-*Or whichever function you need to use. But if you're using this and you didn't know that... pause and read something else first
 
 ## 🤝 Contributing
 
